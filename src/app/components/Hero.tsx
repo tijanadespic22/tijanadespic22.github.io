@@ -1,15 +1,10 @@
 import { ArrowRight } from "lucide-react";
+// @ts-ignore
+import CVImage from "../../assets/cv.jpg";
 
 export function Hero() {
   const scrollToContact = () => {
     const element = document.getElementById("kontakt");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const scrollToPortfolio = () => {
-    const element = document.getElementById("portfolio");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -71,9 +66,9 @@ export function Hero() {
             </div>
           </div>
             <img
-                src="/cv.jpg"
+                src={CVImage}
                 alt="Hero Image"
-                className="w-1/4 h-auto rounded-2xl shadow-lg lg:visible hidden animate-float"
+                className="w-1/4 h-auto rounded-2xl shadow-lg md:visible invisible"
             />
         </div>
 
