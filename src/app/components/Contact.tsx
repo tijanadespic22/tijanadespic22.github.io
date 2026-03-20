@@ -1,28 +1,26 @@
 import { Mail, Phone, Calendar, Send } from "lucide-react";
-import { useState } from "react";
+import {FormEvent, useState} from "react";
+import {sendMessage} from "../Services/Messanger";
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    projectType: "",
-    budget: "",
     message: ""
   });
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Simulacija slanja forme
-    setSubmitted(true);
+    sendMessage(formData)
+    setSubmitted(() =>true);
     setTimeout(() => {
-      setSubmitted(false);
+      setSubmitted(() =>false);
       setFormData({
         name: "",
         email: "",
-        projectType: "",
-        budget: "",
         message: ""
       });
     }, 3000);
