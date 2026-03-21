@@ -1,6 +1,8 @@
 'use client';
 import {memo, useState} from 'react';
 import Link from 'next/link';
+import CloseIcon from '@/icons/CloseIcon';
+import MenuIcon from '@/icons/MenuIcon';
 
 const NavItems = [
   {
@@ -52,7 +54,17 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2"
             aria-label="Toggle menu">
-            {/*{isOpen ? <X size={24} /> : <Menu size={24} />}*/}
+            {isOpen ? (
+              <CloseIcon
+                width={24}
+                height={24}
+              />
+            ) : (
+              <MenuIcon
+                width={24}
+                height={24}
+              />
+            )}
           </button>
         </div>
 

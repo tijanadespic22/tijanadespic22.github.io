@@ -17,12 +17,12 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mb-16 flex gap-6 overflow-x-scroll pb-2 [scrollbar-width:auto] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 lg:grid lg:grid-cols-3 lg:gap-12 lg:overflow-visible lg:pb-0 lg:[scrollbar-width:initial]">
+        <div className="mb-16 md:pt-8 pt-16 flex gap-6 overflow-x-scroll pb-2 [scrollbar-width:auto] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 lg:grid lg:grid-cols-3 lg:gap-12 lg:overflow-visible lg:pb-0 lg:[scrollbar-width:initial] lg:pt-0">
           {servicesItems.map((service, index) => (
             <div
               key={index}
               className={cn(
-                'relative min-w-[90vw] lg:min-w-0 flex-1 rounded-2xl pt-14 px-8 pb-8 hover:shadow-lg transition',
+                'relative min-w-[90vw] lg:min-w-0 flex-1 rounded-2xl pt-14 px-8 pb-8 hover:shadow-lg transition overflow-visible',
                 service.containerClassName,
                 'rounded-2xl border border-gray-200',
               )}>
