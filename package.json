@@ -34,6 +34,8 @@
     "unrs-resolver"
   ],
   "trustedDependencies": [
+    "@tsparticles/engine",
+    "esbuild",
     "sharp",
     "unrs-resolver"
   ]
