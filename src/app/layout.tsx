@@ -10,8 +10,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={'scroll-smooth'}>
-      <body className="min-h-full flex flex-col">
+      className={'scroll-smooth'}
+      suppressHydrationWarning>
+      <head></head>
+      <body className="min-h-full flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
         <Navigation />
         {children}
       </body>
