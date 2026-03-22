@@ -10,7 +10,9 @@ const Hero = () => {
       <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between mt-16 md:mt-0">
         <div className="space-y-8 text-center">
           <div className="inline-block px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700">
-            <span className="text-sm text-gray-600 dark:text-gray-400">UI/UX Dizajn & Web Development</span>
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              UI/UX Dizajn & Web Development
+            </span>
           </div>
 
           <h1 className="text-3xl sm:text-3xl lg:text-7xl max-w-4xl mx-auto dark:text-white">
@@ -30,12 +32,12 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center cursor-pointer gap-4 pt-4">
             <Link
               href="/#contact"
-              className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center gap-2">
+              className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center gap-2 dark:bg-white dark:text-black">
               Kontaktiraj Me
               <ArrowIcon
                 height={30}
                 width={30}
-                className={'rotate-90'}
+                className={'rotate-90 fill-white dark:fill-black'}
               />
             </Link>
           </div>
@@ -47,7 +49,9 @@ const Hero = () => {
                   <div className="text-3xl mb-1 dark:text-white">{element.value}</div>
                   <div>{element.description}</div>
                 </div>
-                {element?.pipe ? <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600" /> : null}
+                {element?.pipe ? (
+                  <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600" />
+                ) : null}
               </Fragment>
             ))}
           </div>
