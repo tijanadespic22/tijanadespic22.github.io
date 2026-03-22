@@ -32,12 +32,12 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center cursor-pointer gap-4 pt-4">
             <Link
               href="/#contact"
-              className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center gap-2 dark:bg-white dark:text-black">
+              className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center border dark:border-white">
               Kontaktiraj Me
               <ArrowIcon
                 height={30}
                 width={30}
-                className={'rotate-90 fill-white dark:fill-black'}
+                className={'rotate-90'}
               />
             </Link>
           </div>
