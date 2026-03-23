@@ -7,7 +7,7 @@ import {heroElements} from '@/components/data/hero';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between mt-16 md:mt-0">
+      <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between mt-18 md:mt-0">
         <div className="space-y-8 text-center">
           <div className="inline-block px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700">
             <span className="text-sm text-gray-600 dark:text-gray-400">
