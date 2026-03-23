@@ -4,24 +4,42 @@ import Link from 'next/link';
 import CloseIcon from '@/icons/CloseIcon';
 import MenuIcon from '@/icons/MenuIcon';
 import ThemeToggle from '@/components/ThemeToggle';
+import ScrollProgress from '@/components/ScrollProgress';
 
 const NavItems = [
   {
     href: '/#services',
     title: 'Usluge',
     className: 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
-    classNameMobile: 'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+    classNameMobile:
+      'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
   },
   {
     href: '/#projects',
-    title: 'Projekti',
+    title: 'Izdvojeni projekti',
     className: 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
-    classNameMobile: 'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+    classNameMobile:
+      'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+  },
+  {
+    href: '/#packages',
+    title: 'Paketi',
+    className: 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+    classNameMobile:
+      'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+  },
+  {
+    href: '/about',
+    title: 'O Meni',
+    className: 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
+    classNameMobile:
+      'block w-full text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition',
   },
   {
     href: '/#contact',
     title: 'Kontakt',
-    className: 'bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition',
+    className:
+      'bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition',
     classNameMobile:
       'bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition w-full',
   },
@@ -86,6 +104,7 @@ const Navigation = () => {
           </div>
         )}
       </div>
+      <ScrollProgress />
     </nav>
   );
 };

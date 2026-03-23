@@ -5,9 +5,12 @@ import SendIcon from '@/icons/SendIcon';
 import Link from 'next/link';
 import {contactItems} from '@/components/data/contact';
 import Icon from '@/icons/Icon';
+import {useSearchParams} from 'next/navigation';
 import {sendMessage} from '@/services/Messanger';
 
 const Contact = () => {
+  const searchParams = useSearchParams();
+
   const {
     handleSubmit,
     control,
@@ -21,7 +24,8 @@ const Contact = () => {
   });
 
   const onSubmit = (data: MailData) => {
-    sendMessage(data);
+    const selectedPackage = searchParams.get('package');
+    sendMessage({...data, selectedPackage});
   };
 
   return (
@@ -51,7 +55,9 @@ const Contact = () => {
                     />
                   </div>
                   <h4 className="text-xl mb-2 dark:text-white">Uspešno poslato!</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Odgovoriću vam u najkraćem mogućem roku.</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Odgovoriću vam u najkraćem mogućem roku.
+                  </p>
                 </div>
               ) : (
                 <form

@@ -1,0 +1,66 @@
+const packages: Package[] = [
+  {
+    title: 'Starter',
+    subtitle: 'Savršeno za početnike i male biznise',
+    price: 'od 99€',
+    features: [
+      'Logo dizajn (3 koncepta)',
+      'PNG, SVG i PDF formati',
+      'Paket boja i tipografije',
+      '2 runde revizija',
+      'Isporuka za 5 radnih dana',
+    ],
+    cta: 'Kreni',
+    iconName: 'creativeCloud',
+  },
+  {
+    title: 'Web',
+    subtitle: 'Profesionalni sajt koji radi za tebe',
+    price: 'od 349€',
+    features: [
+      'Do 5 stranica',
+      'Responzivan dizajn (mobile/tablet/desktop)',
+      'UI/UX dizajn u Figmi',
+      'Integracija kontakt forme',
+      'Osnovna SEO optimizacija',
+      'Isporuka za 14 radnih dana',
+    ],
+    cta: 'Pokreni Sajt',
+    iconName: 'website',
+  },
+  {
+    title: 'Pro',
+    subtitle: 'Kompletno digitalno prisustvo',
+    price: 'od 699€',
+    priceNote: 'Najpopularniji',
+    features: [
+      'Logo + Branding paket',
+      'Do 10 stranica',
+      'Custom UI/UX dizajn',
+      'CMS integracija',
+      'Performanse & SEO',
+      'Google Analytics setup',
+      'Isporuka za 21 radnih dana',
+    ],
+    cta: 'Izaberi Pro',
+    highlighted: true,
+    iconName: 'pallete',
+  },
+  {
+    title: 'Custom',
+    subtitle: 'Za kompleksne i jedinstvene projekte',
+    price: 'Po dogovoru',
+    features: [
+      'Web aplikacija po meri',
+      'Backend & API integracija',
+      'Napredna animacija i interakcija',
+      'Neograničen broj stranica',
+      'Prioritetna podrška',
+      'Dugoročno partnerstvo',
+    ],
+    cta: 'Kontaktiraj Me',
+    iconName: 'website',
+  },
+];
+
+export {packages};

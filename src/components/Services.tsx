@@ -1,7 +1,6 @@
 import {memo} from 'react';
 import {cn} from '@/utils/CN';
 import {servicesItems} from '@/components/data/services';
-import {toolItems} from '@/components/data/tools';
 import Icon from '@/icons/Icon';
 
 const Services = () => {
@@ -22,7 +21,7 @@ const Services = () => {
             <div
               key={index}
               className={cn(
-                'relative min-w-[90vw] lg:min-w-0 flex-1 rounded-2xl pt-14 px-8 pb-8 hover:shadow-lg transition overflow-visible',
+                'relative min-w-[90vw] lg:min-w-0 flex-1 rounded-2xl pt-14 px-8 pb-8 transition-all duration-300 overflow-visible hover:cursor-pointer hover:shadow-lg hover:scale-[1.2] hover:z-10',
                 service.containerClassName,
                 'rounded-2xl border border-gray-200 dark:border-gray-700',
               )}>
@@ -49,26 +48,6 @@ const Services = () => {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
-          <h3 className="text-2xl mb-8 text-center dark:text-white">Alati & Tehnologije</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-            {toolItems.map((tool, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center gap-2 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-md transition">
-                <div className="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-                  <Icon
-                    name={tool.icon}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{tool.name}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

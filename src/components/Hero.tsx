@@ -25,19 +25,29 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Specijalizovana za kreiranje modernih logoa, web sajtova i aplikacija koje kombinuju
-            vrhunski dizajn sa besprekorno napisanim kodom.
+            Treba ti logo koji ostavlja utisak, sajt koji prodaje ili aplikacija koja radi — bez
+            obzira na projekat, tu sam da ga pretvorim u nešto što funkcioniše i izgleda odlično.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center cursor-pointer gap-4 pt-4">
             <Link
               href="/#contact"
-              className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center border dark:border-white">
+              className="group bg-linear-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center gap-2 border dark:border-white">
               Kontaktiraj Me
               <ArrowIcon
                 height={30}
                 width={30}
-                className={'rotate-90'}
+                className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
+              />
+            </Link>
+            <Link
+              href={'tel:+381653580793'}
+              className="group bg-linear-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full hover:bg-gray-800 flex items-center gap-2 border dark:border-white">
+              Pozovi Me
+              <ArrowIcon
+                height={30}
+                width={30}
+                className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
               />
             </Link>
           </div>
