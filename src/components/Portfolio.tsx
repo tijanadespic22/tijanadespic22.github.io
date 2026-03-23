@@ -62,21 +62,6 @@ const Portfolio = () => {
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-normal wrap-break-word">
                   {project.description}
                 </p>
-                <div className="pt-2">
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                    Ključni rezultati:
-                  </div>
-                  <ul className="space-y-2">
-                    {project.results.slice(0, 2).map((result, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 shrink-0"></div>
-                        <span className="text-gray-700 dark:text-gray-300">{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.technologies.map(tech => (
                     <span
