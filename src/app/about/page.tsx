@@ -67,7 +67,7 @@ const About = () => {
                 />
               </Link>
               <Link
-                href="/#projects"
+                href="/projects"
                 className="group inline-flex items-center gap-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-7 py-3.5 rounded-full font-medium hover:border-gray-500 dark:hover:border-gray-400 transition">
                 Pogledaj Radove
                 <ArrowIcon

@@ -3,6 +3,7 @@ import {caseStudies} from './data/portfolio';
 import ArrowIcon from '@/icons/ArrowIcon';
 import {memo} from 'react';
 import {cn} from '@/utils/CN';
+import Link from 'next/link';
 
 const Portfolio = () => {
   return (
@@ -31,7 +32,9 @@ const Portfolio = () => {
               )}>
               {/* Image */}
               <div className="flex-1 w-full">
-                <div className="group relative overflow-hidden rounded-2xl aspect-4/3 bg-gray-200 dark:bg-gray-700 cursor-pointer">
+                <Link
+                  href="/projects"
+                  className="group relative overflow-hidden rounded-2xl aspect-4/3 bg-gray-200 dark:bg-gray-700 cursor-pointer block">
                   <img
                     src={project.thumbnail}
                     alt={project.title}
@@ -41,13 +44,13 @@ const Portfolio = () => {
                     <div className="text-white flex items-center gap-2">
                       Detaljnije{' '}
                       <ArrowIcon
-                        className={'rotate-90'}
+                        className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
                         width={20}
                         height={20}
                       />
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Content */}
@@ -60,7 +63,9 @@ const Portfolio = () => {
                   {project.description}
                 </p>
                 <div className="pt-2">
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">Ključni rezultati:</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    Ključni rezultati:
+                  </div>
                   <ul className="space-y-2">
                     {project.results.slice(0, 2).map((result, i) => (
                       <li
@@ -84,6 +89,20 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Dugme ka svim projektima */}
+        <div className="text-center mt-16">
+          <Link
+            href="/projects"
+            className="group inline-flex items-center gap-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-7 py-3.5 rounded-full font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors">
+            Svi projekti
+            <ArrowIcon
+              className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
+              width={18}
+              height={18}
+            />
+          </Link>
         </div>
       </div>
     </section>
