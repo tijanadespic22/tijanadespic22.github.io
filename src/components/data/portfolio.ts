@@ -1,81 +1,49 @@
 const caseStudies: CaseStudy[] = [
   {
-    id: 'dashboard-analytics',
-    title: 'Analytics Dashboard za SaaS Startup',
+    id: 'dashboard-grooming-pasa',
+    title: 'Aplikacija za Grooming Pasa ',
     category: 'UI/UX Dizajn & Izrada',
     client: 'TechFlow Solutions',
-    thumbnail:
-      'https://images.unsplash.com/photo-1771922748624-b205cf5d002d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBkYXNoYm9hcmQlMjB1aSUyMGludGVyZmFjZXxlbnwxfHx8fDE3NzM5MDQxODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    thumbnail: '/projects/dog/4.png',
+    images: ['/projects/dog/1.png', '/projects/dog/2.png', '/projects/dog/3.png'],
     description:
-      'Kompletan redizajn i izrada analytics platforme za praćenje biznis metrika u realnom vremenu.',
+      'Dizajn i razvoj web aplikacije za praćenje i upravljanje uslugama šišanja pasa, uključujući zakazivanje, praćenje istorije usluga i analitiku zadovoljstva klijenata.',
     problem:
-      'Klijent je imao zastarelu analytics platformu sa lošim UX-om. Korisnici su se žalili na komplikovan interfejs i sporu navigaciju. Potreba za modernizacijom i poboljšanjem korisničkog iskustva bila je ključna za zadržavanje klijenata.',
+      'Klijent je imao zastarelu desktop aplikaciju koja nije bila user-friendly, što je dovodilo do gubitka klijenata i smanjenja efikasnosti zaposlenih. Potreban im je moderan, intuitivan i responzivan web interfejs koji bi poboljšao korisničko iskustvo i povećao angažman.',
     solution:
-      'Dizajnirao sam intuitivni dashboard sa jasnom hijerarhijom informacija, implementirao real-time vizualizacije podataka, i optimizovao performanse. Korišćen je moderan dizajn sistem sa responsive layoutom za sve uređaje.',
+      'Kreirao sam moderan i responzivan dizajn sa fokusom na jednostavnost korišćenja. Implementirao sam funkcionalnosti poput kalendara za zakazivanje, detaljnih profila pasa, i interaktivnih grafikona za analizu zadovoljstva klijenata. Koristio sam React i Tailwind CSS za frontend, a Node.js za backend razvoj.',
     results: [
-      '60% poboljšanje u zadovoljstvu korisnika',
-      '45% povećanje dnevne aktivnosti korisnika',
-      'Smanjenje vremena za završetak ključnih zadataka za 50%',
-      'Pozitivne recenzije od 95% korisnika nakon lansiranja',
+      'Povećanje angažmana korisnika za 50% u prva dva meseca',
+      'Smanjenje vremena potrebnog za zakazivanje usluga za 70%',
+      'Poboljšanje zadovoljstva klijenata sa prosečnom ocenom od 4.8/5',
+      'Povećanje broja ponovljenih klijenata za 30%',
     ],
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Figma'],
     year: '2025',
     duration: '3 meseca',
-    images: [
-      'https://images.unsplash.com/photo-1771922748624-b205cf5d002d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBkYXNoYm9hcmQlMjB1aSUyMGludGVyZmFjZXxlbnwxfHx8fDE3NzM5MDQxODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    ],
   },
   {
     id: 'mobile-fitness-app',
-    title: 'Fitness & Wellnes Mobilna Aplikacija',
+    title: 'Aplikacija za Fitnes Praćenje',
     category: 'UI/UX Dizajn',
     client: 'FitLife Pro',
-    thumbnail:
-      'https://images.unsplash.com/photo-1707836916010-3c4ad261936c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXAlMjBzbWFydHBob25lfGVufDF8fHx8MTc3MzkwNDE4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    thumbnail: '/projects/fitness/4.png',
     description:
-      'Dizajn mobilne aplikacije za praćenje treninga, ishrane i wellness ciljeva korisnika.',
+      'Redizajn i unapređenje korisničkog interfejsa mobilne aplikacije za fitnes praćenje, sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i motivacije korisnika kroz gamification elemente.',
     problem:
-      'Klijent je lansirao MVP aplikaciju koja nije bila dobro prihvaćena. Korisnici su napuštali aplikaciju nakon prvog dana korišćenja. Analiza je pokazala da je glavni problem neprijatan UI i komplikovana onboarding flow.',
+      'Postojeća aplikacija je imala niz problema sa korisničkim iskustvom, uključujući komplikovan onboarding proces, nedostatak motivacije za korisnike da nastave sa korišćenjem aplikacije, i nejasne vizuelne indikatore napretka. Ovo je rezultiralo niskom stopom zadržavanja korisnika i smanjenjem broja pretplata.',
     solution:
-      'Kreirao sam potpuno novi dizajn fokusiran na jednostavnost i motivaciju korisnika. Implementirao sam gamification elemente, personalizovani onboarding, i vizuelno privlačne grafike sa jasnim progress indikatorima.',
+      'Sproveo sam detaljnu analizu korisničkog iskustva i identifikovao ključne tačke bola. Redizajnirao sam onboarding proces da bude jednostavan i intuitivan, implementirao gamification elemente poput bedževa i nivoa za motivaciju korisnika, i unapredio vizuelne indikatore napretka kroz interaktivne grafikone i animacije. Koristio sam Figma za dizajn prototipa i Principle za kreiranje interaktivnih animacija.',
     results: [
-      'Retention rate poboljšan sa 15% na 68% u prvoj nedelji',
-      'Prosečno vreme sesije povećano za 3x',
-      '4.8 zvezdica na App Store nakon redizajna',
-      '40% povećanje broja plaćenih pretplata',
+      'Povećanje stope zadržavanja korisnika za 40% u prva tri meseca',
+      'Povećanje broja pretplata za 25% nakon redizajna',
+      'Poboljšanje korisničkog zadovoljstva sa prosečnom ocenom od 4.7/5',
+      'Povećanje angažmana korisnika kroz gamification elemente za 35%',
     ],
     technologies: ['Figma', 'Adobe XD', 'Principle', 'User Testing'],
     year: '2025',
     duration: '2 meseca',
-    images: [
-      'https://images.unsplash.com/photo-1707836916010-3c4ad261936c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXAlMjBzbWFydHBob25lfGVufDF8fHx8MTc3MzkwNDE4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    ],
-  },
-  {
-    id: 'ecommerce-platform',
-    title: 'E-Commerce Platforma za Fashion Brand',
-    category: 'Izrada Web Sajta',
-    client: 'Elegance Boutique',
-    thumbnail:
-      'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwc2hvcHBpbmd8ZW58MXx8fHwxNzczODMwNTY0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    description:
-      'Kompletna izrada moderne e-commerce platforme sa integracijom plaćanja i inventory management-om.',
-    problem:
-      'Klijent je prodavao proizvode putem Instagram-a i gubio mnoge potencijalne kupce zbog nedostatka profesionalne online prodavnice. Potreban im je bio brz i pouzdan e-commerce sajt sa sigurnim plaćanjem.',
-    solution:
-      'Razvio sam full-stack e-commerce rešenje sa elegantnim dizajnom, brzim učitavanjem, integrisanim payment gateway-om (Stripe), i admin panelom za upravljanje proizvodima i porudžbinama. Implementirao sam napredne filtere i search funkcionalnost.',
-    results: [
-      'Online prodaja porasla za 250% u prva tri meseca',
-      'Prosečna vrednost korpe povećana za 35%',
-      'Conversion rate od 3.2% - iznad proseka industrije',
-      'Page load time ispod 2 sekunde',
-    ],
-    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Node.js'],
-    year: '2026',
-    duration: '4 meseca',
-    images: [
-      'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwc2hvcHBpbmd8ZW58MXx8fHwxNzczODMwNTY0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    ],
+    images: ['/projects/fitness/1.png', '/projects/fitness/2.png', '/projects/fitness/3.png'],
   },
 ];
 
