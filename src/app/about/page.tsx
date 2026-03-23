@@ -4,6 +4,14 @@ import Tools from '@/components/Tools';
 import Contact from '@/components/Contact';
 import {heroElements} from '@/components/data/hero';
 import {Fragment} from 'react';
+import type {Metadata} from 'next';
+
+export const metadata: Metadata = {
+  title: 'O meni',
+  description:
+    'Upoznaj Tijanu Despić — freelance UI/UX dizajnerku i web developer sa 7+ godina iskustva. Radim sa brendovima i startapima iz Srbije i inostranstva.',
+  alternates: {canonical: 'https://tijanadespic.hok.rs/about'},
+};
 
 const About = () => {
   return (
@@ -47,7 +55,7 @@ const About = () => {
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               Freelance UI/UX dizajnerka i web developer sa više od{' '}
               <span className="font-semibold text-gray-900 dark:text-white">7 godina iskustva</span>
-              . Pomažem brendovima i startapima da izgledaju ozbiljno i rade još bolje.
+              . Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               Moj pristup je jednostavan — slušam šta trebaš, razumem tvoje korisnike i isporučujem

@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import {caseStudies} from '@/components/data/portfolio';
 import ArrowIcon from '@/icons/ArrowIcon';
+import type {Metadata} from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projekti',
+  description:
+    'Pogledaj izbor UI/UX i web development projekata Tijane Despić — analytics dashboardi, mobilne aplikacije, e-commerce platforme i više.',
+  alternates: {canonical: 'https://tijanadespic.hok.rs/projects'},
+};
 
 export default function ProjectsPage() {
   return (
