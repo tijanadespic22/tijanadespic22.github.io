@@ -57,14 +57,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
   return (
-    <html lang="sr" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="sr"
+      className="scroll-smooth"
+      suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`,
           }}
         />
-        <meta name="google-site-verification" content="6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA" />
+        <meta
+          name="google-site-verification"
+          content="6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA"
+        />
         {/* JSON-LD strukturirani podaci */}
         <script
           type="application/ld+json"
@@ -87,7 +93,14 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
                 '@type': 'PostalAddress',
                 addressCountry: 'RS',
               },
-              knowsAbout: ['UI/UX Design', 'Web Development', 'Logo Design', 'React', 'Next.js', 'Figma'],
+              knowsAbout: [
+                'UI/UX Design',
+                'Web Development',
+                'Logo Design',
+                'React',
+                'Next.js',
+                'Figma',
+              ],
               offers: {
                 '@type': 'Offer',
                 description: 'Freelance UI/UX dizajn i web development usluge',
