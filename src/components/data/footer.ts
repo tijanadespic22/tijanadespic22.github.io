@@ -28,6 +28,8 @@ const footerItems = [
   {label: 'Usluge', href: '/#services'},
   {label: 'Portfolio', href: '/#projects'},
   {label: 'Kontakt', href: '/#contact'},
+  {label: 'Projekti', href: '/project'},
+  {label: 'O Meni', href: '/about'},
 ];
 
 export {socialLinks, footerServices, footerItems};
