@@ -9,6 +9,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import {cn} from '@/utils/CN';
 
 const homeLinks = [
+  {href: '/', title: 'Početna', section: ''},
   {href: '/#services', title: 'Usluge', section: 'services'},
   {href: '/#projects', title: 'Projekti', section: 'projects'},
   {href: '/#packages', title: 'Paketi', section: 'packages'},
@@ -29,25 +30,33 @@ const Navigation = () => {
   useEffect(() => {
     if (!isHome) return;
 
-    const sectionIds = homeLinks.map(l => l.section);
-    const observers: IntersectionObserver[] = [];
+    const sections = homeLinks
+      .filter(l => l.section !== '')
+      .map(l => ({id: l.section, el: document.getElementById(l.section)}))
+      .filter(s => s.el !== null) as {id: string; el: HTMLElement}[];
 
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (!el) return;
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
 
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveSection(id);
-        },
-        {rootMargin: '-40% 0px -55% 0px'},
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
+      if (scrollY < 80) {
+        setActiveSection('');
+        return;
+      }
+
+      let current = '';
+      for (const s of sections) {
+        if (s.el.offsetTop - window.innerHeight * 0.45 <= scrollY) {
+          current = s.id;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, {passive: true});
+    handleScroll();
 
     return () => {
-      observers.forEach(o => o.disconnect());
+      window.removeEventListener('scroll', handleScroll);
       setActiveSection('');
     };
   }, [isHome]);
@@ -84,7 +93,9 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={navLinkCls(isHome && activeSection === item.section)}>
+                className={navLinkCls(
+                  isHome && (item.section === '' ? activeSection === '' : activeSection === item.section)
+                )}>
                 {item.title}
               </Link>
             ))}
@@ -143,7 +154,9 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={mobileLinkCls(isHome && activeSection === item.section)}
+                className={mobileLinkCls(
+                  isHome && (item.section === '' ? activeSection === '' : activeSection === item.section)
+                )}
                 onClick={() => setIsOpen(false)}>
                 {item.title}
               </Link>
