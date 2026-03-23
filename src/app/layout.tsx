@@ -20,6 +20,10 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}else if(t==='light'){document.documentElement.classList.remove('dark');}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark');}}catch(e){}})();`,
           }}
         />
+        <meta
+          name="google-site-verification"
+          content="6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
         <Navigation />
