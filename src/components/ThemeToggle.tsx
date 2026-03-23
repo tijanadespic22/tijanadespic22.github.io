@@ -1,36 +1,23 @@
 'use client';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import MoonIcon from '@/icons/MoonIcon';
 import SunIcon from '@/icons/SunIcon';
 
 const ThemeToggle = () => {
-  // Čitamo iz DOM-a jer je inline script već postavio ispravnu klasu
   const [isDark, setIsDark] = useState(
-    () => typeof document !== 'undefined' && document.documentElement.classList.contains('dark'),
+    () => typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark',
   );
 
-  // Slušamo promene sistemske teme kad nema stored preferencije
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-    const handler = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('theme')) setIsDark(e.matches);
-    };
-    media.addEventListener('change', handler);
-    return () => media.removeEventListener('change', handler);
-  }, []);
-
   const toggle = () => {
-    setIsDark(v => {
-      const next = !v;
-      if (next) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      return next;
-    });
+    const next = !isDark;
+    setIsDark(next);
+    if (next) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.removeItem('theme');
+    }
   };
 
   return (
