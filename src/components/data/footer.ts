@@ -6,7 +6,7 @@ const socialLinks: Social[] = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/tijana_despic',
+    href: 'https://www.instagram.com/tijanadespic.hok.rs',
     icon: 'instagram',
   },
   {

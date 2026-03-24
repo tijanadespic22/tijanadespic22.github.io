@@ -53,6 +53,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
@@ -86,7 +90,7 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
                 'Freelance UI/UX dizajnerka i web developer sa 7+ godina iskustva. Specijalizovana za logo dizajn, web sajtove i aplikacije.',
               sameAs: [
                 'https://www.linkedin.com/in/tijana-despic',
-                'https://www.instagram.com/tijana_despic',
+                'https://www.instagram.com/tijanadespic.hok.rs',
               ],
               email: 'tijanadespic24@gmail.com',
               address: {

@@ -7,6 +7,7 @@ import MenuIcon from '@/icons/MenuIcon';
 import ThemeToggle from '@/components/ThemeToggle';
 import ScrollProgress from '@/components/ScrollProgress';
 import {cn} from '@/utils/CN';
+import LogoIcon from '@/icons/LogoIcon';
 
 const homeLinks = [
   {href: '/', title: 'Početna', section: ''},
@@ -83,8 +84,12 @@ const Navigation = () => {
         <div className="flex flex-row justify-between items-center h-16">
           <Link
             href="/"
-            className="text-xl font-semibold text-black dark:text-white">
-            Tijana Despić
+            className="text-xl font-semibold text-black dark:text-white flex flex-row items-center gap-2">
+            <LogoIcon
+              height={100}
+              width={100}
+            />
+            <span>Tijana Despić</span>
           </Link>
 
           {/* Desktop */}
@@ -94,7 +99,8 @@ const Navigation = () => {
                 key={item.href}
                 href={item.href}
                 className={navLinkCls(
-                  isHome && (item.section === '' ? activeSection === '' : activeSection === item.section)
+                  isHome &&
+                    (item.section === '' ? activeSection === '' : activeSection === item.section),
                 )}>
                 {item.title}
               </Link>
@@ -155,7 +161,8 @@ const Navigation = () => {
                 key={item.href}
                 href={item.href}
                 className={mobileLinkCls(
-                  isHome && (item.section === '' ? activeSection === '' : activeSection === item.section)
+                  isHome &&
+                    (item.section === '' ? activeSection === '' : activeSection === item.section),
                 )}
                 onClick={() => setIsOpen(false)}>
                 {item.title}
