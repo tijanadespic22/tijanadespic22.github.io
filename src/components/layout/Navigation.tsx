@@ -151,7 +151,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile menu */}
-        {isOpen && (
+        {isOpen ? (
           <div className="md:hidden py-4 space-y-1 border-t border-gray-100 dark:border-gray-800">
             <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 px-2 pb-1">
               Na početnoj
@@ -193,7 +193,7 @@ const Navigation = () => {
               Kontakt
             </Link>
           </div>
-        )}
+        ) : null}
       </div>
       <ScrollProgress />
     </nav>
