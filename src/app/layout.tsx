@@ -3,6 +3,8 @@ import './globals.css';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import type {Metadata} from 'next';
+import Script from 'next/script';
+import '@i18n/localeConfig';
 
 const BASE_URL = 'https://tijanadespic.hok.rs';
 
@@ -62,20 +64,14 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
   return (
     <html
-      lang="sr"
+      lang="common"
       className="scroll-smooth"
       suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`,
-          }}
-        />
         <meta
           name="google-site-verification"
           content="6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA"
         />
-        {/* JSON-LD strukturirani podaci */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,10 +109,17 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
+      <body className="flex min-h-full flex-col bg-black/10 transition-colors duration-300 dark:bg-black/90">
         <Navigation />
         {children}
         <Footer />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}`,
+          }}
+        />
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 'use client';
-import {memo, useEffect, useState} from 'react';
+import {memo, useEffect, useRef, useState} from 'react';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import CloseIcon from '@/icons/CloseIcon';
@@ -8,6 +8,10 @@ import ThemeToggle from '@/components/ThemeToggle';
 import ScrollProgress from '@/components/ScrollProgress';
 import {cn} from '@/utils/CN';
 import LogoIcon from '@/icons/LogoIcon';
+import {useTranslation} from 'react-i18next';
+import LocaleConfig from '@i18n/localeConfig';
+import FlagSerbiaIcon from '@icons/FlagSerbiaIcon';
+import FlagUkIcon from '@icons/FlagUkIcon';
 
 const homeLinks = [
   {href: '/', title: 'Početna', section: ''},
@@ -21,12 +25,57 @@ const pageLinks = [
   {href: '/about', title: 'O meni'},
 ];
 
+const Languages = [
+  {code: 'sr', Icon: FlagSerbiaIcon, label: 'SR'},
+  {code: 'en', Icon: FlagUkIcon, label: 'EN'},
+];
+
+const LangToggle = ({currentLang, mobile = false}: {currentLang: string; mobile?: boolean}) => (
+  <div
+    className={cn(
+      'flex items-center overflow-hidden rounded-full border border-gray-200 text-sm dark:border-gray-700',
+    )}>
+    {Languages.map(({code, Icon, label}) => (
+      <button
+        key={code}
+        onClick={() => LocaleConfig.changeLanguage(code)}
+        className={cn(
+          'flex items-center gap-1.5 px-3 py-1.5 transition-colors',
+          'text-gray-600 hover:cursor-pointer dark:text-gray-400',
+          {
+            'bg-gray-900 font-medium text-white dark:bg-white dark:text-black':
+              currentLang === code,
+            'flex-1': mobile,
+          },
+        )}>
+        <Icon
+          width={16}
+          height={16}
+        />
+        {label}
+      </button>
+    ))}
+  </div>
+);
+
 const Navigation = () => {
+  const {
+    t,
+    i18n: {language},
+  } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-
   const isHome = pathname === '/';
+  const rafRef = useRef<number>(null);
+
+  useEffect(() => {
+    rafRef.current = requestAnimationFrame(() => setMounted(true));
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isHome) return;
@@ -38,24 +87,19 @@ const Navigation = () => {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-
       if (scrollY < 80) {
         setActiveSection('');
         return;
       }
-
       let current = '';
       for (const s of sections) {
-        if (s.el.offsetTop - window.innerHeight * 0.45 <= scrollY) {
-          current = s.id;
-        }
+        if (s.el.offsetTop - window.innerHeight * 0.45 <= scrollY) current = s.id;
       }
       setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScroll, {passive: true});
     handleScroll();
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
       setActiveSection('');
@@ -78,13 +122,15 @@ const Navigation = () => {
         : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white',
     );
 
+  const currentLang = mounted ? language : 'sr';
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav className="fixed top-0 right-0 left-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/80">
       <div className="mx-auto px-4">
-        <div className="flex flex-row justify-between items-center h-16">
+        <div className="flex h-16 flex-row items-center justify-between">
           <Link
             href="/"
-            className="text-xl font-semibold text-black dark:text-white flex flex-row items-center gap-2">
+            className="flex flex-row items-center gap-2 text-xl font-semibold text-black dark:text-white">
             <LogoIcon
               height={100}
               width={100}
@@ -93,7 +139,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {homeLinks.map(item => (
               <Link
                 key={item.href}
@@ -102,34 +148,35 @@ const Navigation = () => {
                   isHome &&
                     (item.section === '' ? activeSection === '' : activeSection === item.section),
                 )}>
-                {item.title}
+                {t(item.title)}
               </Link>
             ))}
 
-            <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 mx-2" />
+            <div className="mx-2 h-4 w-px bg-gray-300 dark:bg-gray-600" />
 
             {pageLinks.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={navLinkCls(pathname === item.href)}>
-                {item.title}
+                {t(item.title)}
               </Link>
             ))}
 
-            <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 mx-2" />
+            <div className="mx-2 h-4 w-px bg-gray-300 dark:bg-gray-600" />
 
             <Link
               href="/#contact"
-              className="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition">
-              Kontakt
+              className="rounded-full bg-black px-5 py-2 text-sm text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+              {t('Kontakt')}
             </Link>
 
+            <LangToggle currentLang={currentLang} />
             <ThemeToggle />
           </div>
 
-          {/* Mobile */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile toggle */}
+          <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -151,10 +198,10 @@ const Navigation = () => {
         </div>
 
         {/* Mobile menu */}
-        {isOpen ? (
-          <div className="md:hidden py-4 space-y-1 border-t border-gray-100 dark:border-gray-800">
-            <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 px-2 pb-1">
-              Na početnoj
+        {isOpen && (
+          <div className="space-y-1 border-t border-gray-100 py-4 md:hidden dark:border-gray-800">
+            <p className="px-2 pb-1 text-[10px] tracking-widest text-gray-400 uppercase dark:text-gray-500">
+              {t('Na početnoj')}
             </p>
             {homeLinks.map(item => (
               <Link
@@ -165,14 +212,14 @@ const Navigation = () => {
                     (item.section === '' ? activeSection === '' : activeSection === item.section),
                 )}
                 onClick={() => setIsOpen(false)}>
-                {item.title}
+                {t(item.title)}
               </Link>
             ))}
 
-            <div className="border-t border-gray-100 dark:border-gray-800 my-3" />
+            <div className="my-3 border-t border-gray-100 dark:border-gray-800" />
 
-            <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 px-2 pb-1">
-              Stranice
+            <p className="px-2 pb-1 text-[10px] tracking-widest text-gray-400 uppercase dark:text-gray-500">
+              {t('Stranice')}
             </p>
             {pageLinks.map(item => (
               <Link
@@ -180,20 +227,25 @@ const Navigation = () => {
                 href={item.href}
                 className={mobileLinkCls(pathname === item.href)}
                 onClick={() => setIsOpen(false)}>
-                {item.title}
+                {t(item.title)}
               </Link>
             ))}
 
-            <div className="border-t border-gray-100 dark:border-gray-800 my-3" />
+            <div className="my-3 border-t border-gray-100 dark:border-gray-800" />
+
+            <LangToggle
+              currentLang={currentLang}
+              mobile
+            />
 
             <Link
               href="/#contact"
-              className="block bg-black dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-sm text-center hover:bg-gray-800 dark:hover:bg-gray-200 transition"
+              className="block rounded-full bg-black px-6 py-2.5 text-center text-sm text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
               onClick={() => setIsOpen(false)}>
-              Kontakt
+              {t('Kontakt')}
             </Link>
           </div>
-        ) : null}
+        )}
       </div>
       <ScrollProgress />
     </nav>

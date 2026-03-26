@@ -1,8 +1,8 @@
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Portfolio from '@/components/Portfolio';
+import Hero from '@components/home/Hero';
+import Services from '@components/home/Services';
+import Portfolio from '@components/home/Portfolio';
 import Contact from '@/components/Contact';
-import Packages from '@/components/Packages';
+import Packages from '@components/home/Packages';
 import type {Metadata} from 'next';
 
 export const metadata: Metadata = {

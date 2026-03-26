@@ -8,5 +8,8 @@
   "tabWidth": 2,
   "proseWrap": "always",
   "printWidth": 100,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }
