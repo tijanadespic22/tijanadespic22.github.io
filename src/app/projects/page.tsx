@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {caseStudies} from '@/components/data/portfolio';
 import ArrowIcon from '@/icons/ArrowIcon';
 import type {Metadata} from 'next';
@@ -16,9 +17,65 @@ export const metadata: Metadata = {
   },
 };
 
+const BASE_URL = 'https://tijanadespic.hok.rs';
+
 export default function ProjectsPage() {
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Početna',
+        item: BASE_URL,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projekti',
+        item: `${BASE_URL}/projects`,
+      },
+    ],
+  };
+
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${BASE_URL}/projects`,
+    url: `${BASE_URL}/projects`,
+    name: 'Projekti — UI/UX Dizajn & Web Development Portfolio | Tijana Despić',
+    description:
+      'Portfolio radova Tijane Despić — UI/UX dizajn, web aplikacije, mobilni dizajn i logo dizajn za brendove i startape iz Srbije.',
+    author: {'@type': 'Person', name: 'Tijana Despić', url: BASE_URL},
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: caseStudies.map((project, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.description,
+          image: `${BASE_URL}${project.thumbnail}`,
+          keywords: project.technologies.join(', '),
+          dateCreated: project.year,
+          creator: {'@type': 'Person', name: 'Tijana Despić'},
+        },
+      })),
+    },
+  };
+
   return (
     <main className="bg-white dark:bg-gray-900 min-h-screen pt-28 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbJsonLd)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(collectionJsonLd)}}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
@@ -40,16 +97,19 @@ export default function ProjectsPage() {
 
         {/* Gallery grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {caseStudies.map(project => (
+          {caseStudies.map((project, index) => (
             <div
               key={project.id}
               className="group flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-xl transition-all duration-300">
               {/* Slika */}
               <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
-                <img
+                <Image
                   src={project.thumbnail}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  alt={`${project.title} — ${project.category}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority={index === 0}
                 />
               </div>
 
