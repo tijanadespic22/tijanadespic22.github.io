@@ -4,10 +4,16 @@ import ArrowIcon from '@/icons/ArrowIcon';
 import type {Metadata} from 'next';
 
 export const metadata: Metadata = {
-  title: 'Projekti',
+  title: 'Projekti — UI/UX Dizajn & Web Development Portfolio',
   description:
-    'Pogledaj izbor UI/UX i web development projekata Tijane Despić — analytics dashboardi, mobilne aplikacije, e-commerce platforme i više.',
+    'Portfolio radova Tijane Despić — UI/UX dizajn, web aplikacije, mobilni dizajn i logo dizajn. Pogledaj case studies i rezultate projekata za brendove i startape iz Srbije.',
   alternates: {canonical: 'https://tijanadespic.hok.rs/projects'},
+  openGraph: {
+    title: 'Projekti — UI/UX Dizajn & Web Development Portfolio | Tijana Despić',
+    description:
+      'Portfolio radova Tijane Despić — UI/UX dizajn, web aplikacije, mobilni dizajn i logo dizajn za brendove i startape.',
+    url: 'https://tijanadespic.hok.rs/projects',
+  },
 };
 
 export default function ProjectsPage() {
