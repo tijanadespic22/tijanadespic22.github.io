@@ -11,20 +11,20 @@ const Packages = () => {
   const {t} = useTranslation();
   return (
     <section
-      id="packages"
-      className="bg-white py-24 dark:bg-gray-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      id={"packages"}
+      className={"bg-white py-24 dark:bg-gray-900"}>
+      <div className={"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"}>
         {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl sm:text-5xl dark:text-white">{t('Paketi & Cene')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400">
+        <div className={"mb-16 text-center"}>
+          <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Paketi & Cene')}</h2>
+          <p className={"mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400"}>
             {t(
               'Transparentne cene bez skrivenih troškova — izaberi paket koji odgovara tvom projektu',
             )}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={"grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4"}>
           {packages.map((pkg, index) => (
             <Link
               href={{
@@ -41,9 +41,9 @@ const Packages = () => {
                 },
               )}>
               {pkg.priceNote ? (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full bg-linear-to-r from-yellow-400 to-orange-400 px-4 py-1 text-xs font-semibold text-black shadow">
-                    ⭐ {t(pkg.priceNote)}
+                <div className={"absolute -top-3 left-1/2 -translate-x-1/2"}>
+                  <span className={"inline-block rounded-full bg-linear-to-r from-yellow-400 to-orange-400 px-4 py-1 text-xs font-semibold text-black shadow"}>
+                    {"⭐ "}{t(pkg.priceNote)}
                   </span>
                 </div>
               ) : null}
@@ -81,7 +81,7 @@ const Packages = () => {
                 {t(pkg.subtitle)}
               </p>
 
-              <div className="mb-6">
+              <div className={"mb-6"}>
                 <span
                   className={cn('text-3xl font-bold', {
                     'text-white': pkg.highlighted,
@@ -98,11 +98,11 @@ const Packages = () => {
                 })}
               />
 
-              <ul className="mb-8 flex-1 space-y-3">
+              <ul className={"mb-8 flex-1 space-y-3"}>
                 {pkg.features.map((f, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2">
+                    className={"flex items-start gap-2"}>
                     <span
                       className={cn(
                         'mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px]',
@@ -112,7 +112,7 @@ const Packages = () => {
                             !pkg.highlighted,
                         },
                       )}>
-                      ✓
+                      {"✓"}
                     </span>
                     <span
                       className={cn('text-sm', {
@@ -138,7 +138,7 @@ const Packages = () => {
                 <ArrowIcon
                   width={16}
                   height={16}
-                  className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
+                  className={"rotate-90 transition-transform duration-200 group-hover:translate-x-1"}
                 />
               </div>
             </Link>

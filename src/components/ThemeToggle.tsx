@@ -7,7 +7,11 @@ const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(localStorage.getItem('theme') === 'dark');
+    setIsDark(() => {
+      const isDarkMode = localStorage.getItem('theme') === 'dark';
+      document.documentElement.classList.toggle('dark', isDarkMode);
+      return isDarkMode;
+    });
   }, []);
 
   const toggle = () => {
@@ -26,8 +30,10 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggle}
-      aria-label="Toggle dark mode"
-      className="flex items-center justify-center rounded-full hover:cursor-pointer text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+      aria-label={'Toggle dark mode'}
+      className={
+        'flex items-center justify-center rounded-full text-gray-600 transition-colors duration-200 hover:cursor-pointer hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+      }>
       {isDark ? (
         <MoonIcon
           className={'fill-white dark:fill-gray-300'}

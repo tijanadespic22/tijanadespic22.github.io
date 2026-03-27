@@ -9,17 +9,17 @@ const Services = () => {
   const {t} = useTranslation();
   return (
     <section
-      id="services"
-      className="bg-white py-24 dark:bg-gray-900">
-      <div className="mx-auto px-4 sm:px-6 md:max-w-7xl lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl sm:text-5xl dark:text-white">{t('Šta Nudim')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400">
+      id={"services"}
+      className={"bg-white py-24 dark:bg-gray-900"}>
+      <div className={"mx-auto px-4 sm:px-6 md:max-w-7xl lg:px-8"}>
+        <div className={"mb-16 text-center"}>
+          <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Šta Nudim')}</h2>
+          <p className={"mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400"}>
             {t('Kompletan spektar usluga od koncepta do implementacije')}
           </p>
         </div>
 
-        <div className="mb-16 flex gap-6 overflow-x-scroll pt-16 pb-2 [scrollbar-width:auto] md:pt-8 lg:grid lg:grid-cols-3 lg:gap-12 lg:overflow-visible lg:pt-0 lg:pb-0 lg:[scrollbar-width:initial] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 dark:[&::-webkit-scrollbar-thumb]:bg-gray-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 dark:[&::-webkit-scrollbar-track]:bg-gray-700">
+        <div className={"mb-16 flex gap-6 overflow-x-scroll pt-16 pb-2 [scrollbar-width:auto] md:pt-8 lg:grid lg:grid-cols-3 lg:gap-12 lg:overflow-visible lg:pt-0 lg:pb-0 lg:[scrollbar-width:initial] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 dark:[&::-webkit-scrollbar-thumb]:bg-gray-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 dark:[&::-webkit-scrollbar-track]:bg-gray-700"}>
           {servicesItems.map((service, index) => (
             <div
               key={index}
@@ -43,8 +43,8 @@ const Services = () => {
                 </div>
               ) : null}
               <h3 className={cn('mb-4 text-2xl', service.textClassName)}>{t(service.title)}</h3>
-              <p className="mb-6 text-gray-600 dark:text-gray-400">{t(service.description)}</p>
-              <ul className="list-inside list-disc space-y-2 text-gray-600 dark:text-gray-400">
+              <p className={"mb-6 text-gray-600 dark:text-gray-400"}>{t(service.description)}</p>
+              <ul className={"list-inside list-disc space-y-2 text-gray-600 dark:text-gray-400"}>
                 {service.features.map((feature, idx) => (
                   <li key={idx}>{t(feature)}</li>
                 ))}

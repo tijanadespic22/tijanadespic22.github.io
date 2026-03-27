@@ -3,7 +3,6 @@ import './globals.css';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import type {Metadata} from 'next';
-import Script from 'next/script';
 import '@i18n/localeConfig';
 
 const BASE_URL = 'https://tijanadespic.hok.rs';
@@ -53,7 +52,14 @@ export const metadata: Metadata = {
     title: 'Tijana Despić — UI/UX Dizajn & Web Development | Srbija',
     description:
       'Freelance UI/UX dizajnerka i web developer sa 7+ godina iskustva. Izrada logoa, web sajtova i aplikacija za brendove i startape.',
-    images: [{url: '/og-image.jpg', width: 1200, height: 630, alt: 'Tijana Despić — UI/UX Dizajn & Web Development'}],
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tijana Despić — UI/UX Dizajn & Web Development',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -65,8 +71,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: {
-      'sr': BASE_URL,
-      'en': BASE_URL,
+      sr: BASE_URL,
+      en: BASE_URL,
       'x-default': BASE_URL,
     },
   },
@@ -79,16 +85,16 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
   return (
     <html
-      lang="sr"
-      className="scroll-smooth"
+      lang={'sr'}
+      className={'scroll-smooth'}
       suppressHydrationWarning>
       <head>
         <meta
-          name="google-site-verification"
-          content="6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA"
+          name={'google-site-verification'}
+          content={'6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA'}
         />
         <script
-          type="application/ld+json"
+          type={'application/ld+json'}
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {
@@ -195,17 +201,14 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
           }}
         />
       </head>
-      <body className="flex min-h-full flex-col bg-black/10 transition-colors duration-300 dark:bg-black/90">
+      <body
+        suppressHydrationWarning
+        className={
+          'flex min-h-full flex-col bg-black/10 transition-colors duration-300 dark:bg-black/90'
+        }>
         <Navigation />
         {children}
         <Footer />
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}`,
-          }}
-        />
       </body>
     </html>
   );

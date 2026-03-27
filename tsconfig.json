@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,8 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "allowImportingTsExtensions": false,
     "incremental": true,
     "plugins": [
       {
@@ -25,7 +30,6 @@
       "@layouts/*": ["./src/layouts/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@context/*": ["./src/context/*"],
-      "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@service/*": ["./src/service/*"],
       "@icons/*": ["./src/icons/*"],
@@ -38,6 +42,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "src/types/**/*.d.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"

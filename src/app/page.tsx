@@ -4,6 +4,7 @@ import Portfolio from '@components/home/Portfolio';
 import Contact from '@/components/Contact';
 import Packages from '@components/home/Packages';
 import type {Metadata} from 'next';
+import {memo} from 'react';
 
 export const metadata: Metadata = {
   title: 'Tijana Despić — UI/UX Dizajn & Web Development | Srbija',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Hero />
@@ -28,4 +29,6 @@ export default function Home() {
       <Contact />
     </>
   );
-}
+};
+
+export default memo(Home);

@@ -2,6 +2,7 @@ import Tools from '@components/about/Tools';
 import Contact from '@/components/Contact';
 import type {Metadata} from 'next';
 import AboutSection from '@components/about/AboutSection';
+import {memo} from 'react';
 
 export const metadata: Metadata = {
   title: 'O meni — Freelance UI/UX Dizajnerka i Web Developer | Srbija',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className={"min-h-screen bg-white dark:bg-gray-900"}>
       <AboutSection />
       <Tools />
       <Contact />
@@ -26,4 +27,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

@@ -27,35 +27,6 @@ import BunIcon from '@/icons/BunIcon';
 import InstagramIcon from '@/icons/InstagramIcon';
 import LinkedInIcon from '@/icons/LinkedInIcon';
 
-type IconName =
-  | 'mail'
-  | 'phone'
-  | 'send'
-  | 'calendar'
-  | 'creativeCloud'
-  | 'arrow'
-  | 'pallete'
-  | 'website'
-  | 'figma'
-  | 'react'
-  | 'nextjs'
-  | 'tailwind'
-  | 'typescript'
-  | 'nodejs'
-  | 'java'
-  | 'location'
-  | 'strapi'
-  | 'spring'
-  | 'python'
-  | 'firebase'
-  | 'quarkus'
-  | 'bun'
-  | 'graphql'
-  | 'docker'
-  | 'kubernetes'
-  | 'instagram'
-  | 'linkedin';
-
 const Icon = ({name, ...props}: {name: IconName} & Icon) => {
   const icons: Record<IconName, FC<Icon>> = {
     mail: MailIcon,

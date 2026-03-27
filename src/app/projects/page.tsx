@@ -1,6 +1,7 @@
 import {caseStudies} from '@/components/data/portfolio';
 import type {Metadata} from 'next';
 import Projects from '@components/Projects';
+import {memo} from 'react';
 
 export const metadata: Metadata = {
   title: 'Projekti — UI/UX Dizajn & Web Development Portfolio',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 const BASE_URL = 'https://tijanadespic.hok.rs';
 
-export default function ProjectsPage() {
+const ProjectsPage = () => {
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -65,16 +66,18 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white pt-28 pb-24 dark:bg-gray-900">
+    <main className={"min-h-screen bg-white pt-28 pb-24 dark:bg-gray-900"}>
       <script
-        type="application/ld+json"
+        type={"application/ld+json"}
         dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbJsonLd)}}
       />
       <script
-        type="application/ld+json"
+        type={"application/ld+json"}
         dangerouslySetInnerHTML={{__html: JSON.stringify(collectionJsonLd)}}
       />
       <Projects />
     </main>
   );
-}
+};
+
+export default memo(ProjectsPage);

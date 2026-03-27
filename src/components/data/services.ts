@@ -42,7 +42,8 @@ const servicesItems: ServiceItem[] = [
     textClassName: 'text-purple-600 dark:text-purple-400',
     containerClassName: 'bg-purple-50 dark:bg-purple-950/30',
     iconName: 'website',
-    iconContainerClassName: 'bg-white dark:bg-gray-800 border border-purple-200 dark:border-purple-800',
+    iconContainerClassName:
+      'bg-white dark:bg-gray-800 border border-purple-200 dark:border-purple-800',
   },
 ];
 
