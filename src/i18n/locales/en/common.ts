@@ -32,9 +32,33 @@ const common = {
   'Razvijam moderne, brze i responsive web sajtove koristeći najnovije tehnologije. Svaki projekat je optimizovan za performanse i SEO sa čistim, održivim kodom.':
     'I develop modern, fast, and responsive websites using the latest technologies. Each project is optimized for performance and SEO with clean, maintainable code.',
   // Projects section
+  Detaljnije: 'Learn More',
   'Izdvojeni Projekti': 'Featured Projects',
   'Detaljne studije slučaja koje prikazuju proces, rešenja i rezultate':
     'Detailed case studies showcasing the process, solutions, and results',
+  'Web sajt za Stomatološku Ordinaciju': 'Website for Dental Clinic',
+  'Aplikacija za Grooming Pasa ': 'Dog Grooming Application',
+  'Aplikacija za Fitnes Praćenje': 'Fitness Tracking Application',
+  'UI/UX Dizajn & Izrada': 'UI/UX Design & Development',
+  'Stomatološka Ordinacija "DentaVita"': 'Dental Clinic "DentaVita"',
+  'TechFlow Solutions': 'TechFlow Solutions',
+  'FitLife Pro': 'FitLife Pro',
+  'Dizajn i razvoj modernog, responzivnog web sajta za stomatološku ordinaciju "DentaVita", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the "DentaVita" dental clinic, focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Dizajn i razvoj web aplikacije za praćenje i upravljanje uslugama šišanja pasa, uključujući zakazivanje, praćenje istorije usluga i analitiku zadovoljstva klijenata.':
+    'Design and development of a web application for tracking and managing dog grooming services, including scheduling, service history tracking, and customer satisfaction analytics.',
+  'Redizajn i unapređenje korisničkog interfejsa mobilne aplikacije za fitnes praćenje, sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i motivacije korisnika kroz gamification elemente.':
+    'Redesign and enhancement of the user interface of a fitness tracking mobile application, focusing on improving user experience, increasing engagement, and motivating users through gamification elements.',
+  'Povećanje angažmana korisnika za 60% u prva tri meseca':
+    'Increased user engagement by 60% in the first three months',
+  'Povećanje broja zakazivanja usluga putem sajta za 45%':
+    'Increased service bookings through the website by 45%',
+  'Poboljšanje zadovoljstva klijenata sa prosečnom ocenom od 4.9/5':
+    'Improved customer satisfaction with an average rating of 4.9/5',
+  'Povećanje vidljivosti na pretraživačima sa 20% više organskog saobraćaja':
+    'Increased search engine visibility with 20% more organic traffic',
+  'Povećanje angažmana korisnika za 50% u prva dva meseca':
+    'Increased user engagement by 50% in the first two months',
   // packages section
   'Paketi & Cene': 'Packages & Pricing',
   'Transparentne cene bez skrivenih troškova — izaberi paket koji odgovara tvom projektu':
@@ -108,6 +132,14 @@ const common = {
   Telefon: 'Phone',
   'Radno vreme': 'Working hours',
   'Pon - Pet, 9:00 - 18:00': 'Mon - Fri, 9:00 AM - 6:00 PM',
+  // Projects page
+  'Nazad na početnu': 'Back to Home',
+  'Izbor radova koji mogu javno da podelim — od brendiranja i UI/UX dizajna do izrade web aplikacija.':
+    'A selection of works that I can publicly share — from branding and UI/UX design to web application development.',
+  'Deo portfolija ostaje povjerljiv': 'Part of the portfolio remains confidential',
+  'Zbog ugovornih obaveza i zaštite poslovnih informacija klijenata, određeni projekti nisu\njavno dostupni. Ukoliko vas zanima detaljniji uvid u moj rad, slobodno me kontaktirajte\n — dodatne primere mogu podeliti direktno i diskretno.':
+    "Due to contractual obligations and the protection of clients' business information, certain projects are not publicly available. If you are interested in a more detailed insight into my work, feel free to contact me — I can share additional examples directly and discreetly.",
+  'Imaš projekat na umu?': 'Have a project in mind?',
 };
 
 export default common;

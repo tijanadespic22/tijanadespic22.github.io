@@ -12,4 +12,5 @@ type CaseStudy = {
   year: string;
   duration: string;
   images: string[];
+  url?: string;
 };

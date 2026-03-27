@@ -35,7 +35,8 @@ const Portfolio = () => {
               {/* Image */}
               <div className="w-full flex-1">
                 <Link
-                  href="/projects"
+                  href={project?.url ?? '/projects'}
+                  target={project?.url ? '_blank' : '_self'}
                   className="group relative block aspect-4/3 cursor-pointer overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-700">
                   <img
                     src={project.thumbnail}
@@ -44,7 +45,7 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/60 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <div className="flex items-center gap-2 text-white">
-                      Detaljnije{' '}
+                      {t('Detaljnije')}{' '}
                       <ArrowIcon
                         className="rotate-90 transition-transform duration-200 group-hover:translate-x-1"
                         width={20}
@@ -58,18 +59,18 @@ const Portfolio = () => {
               {/* Content */}
               <div className="flex-1 space-y-4">
                 <div className="inline-block rounded-full border border-gray-200 bg-white px-3 py-1 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
-                  {project.category}
+                  {t(project.category)}
                 </div>
-                <h3 className="text-3xl dark:text-white">{project.title}</h3>
+                <h3 className="text-3xl dark:text-white">{t(project.title)}</h3>
                 <p className="leading-relaxed wrap-break-word whitespace-normal text-gray-600 dark:text-gray-400">
-                  {project.description}
+                  {t(project.description)}
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.technologies.map(tech => (
                     <span
                       key={tech}
                       className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700 dark:bg-gray-700 dark:text-gray-300">
-                      {tech}
+                      {t(tech)}
                     </span>
                   ))}
                 </div>
