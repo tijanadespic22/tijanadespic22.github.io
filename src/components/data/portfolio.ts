@@ -24,6 +24,54 @@ const caseStudies: CaseStudy[] = [
     url: 'https://ordinacija.hok.rs',
   },
   {
+    id: 'spa-website',
+    title: 'Web sajt za Spa Centar',
+    category: 'UI/UX Dizajn & Izrada',
+    client: 'Spa Centar "Deluxe"',
+    thumbnail: '/projects/spa/1.png',
+    images: ['/projects/spa/1.png'],
+    description:
+      'Dizajn i razvoj modernog, responzivnog web sajta za spa centar "Deluxe", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.',
+    problem:
+      'Klijent je imao zastarelu web stranicu koja nije bila prilagođena mobilnim uređajima, što je rezultiralo niskom stopom angažmana i gubitkom potencijalnih klijenata. Potreban im je moderan, responzivan dizajn koji bi poboljšao korisničko iskustvo i povećao vidljivost na pretraživačima.',
+    solution:
+      'Kreirao sam moderan i responzivan dizajn sa fokusom na jednostavnost korišćenja. Implementirao sam funkcionalnosti poput online zakazivanja, detaljnih profila usluga, i interaktivnih mapa lokacije. Koristio sam React i Tailwind CSS za frontend, a Node.js za backend razvoj. Takođe sam optimizovao sadržaj sajta za SEO kako bi povećao vidljivost na pretraživačima.',
+    results: [
+      'Povećanje angažmana korisnika za 60% u prva tri meseca',
+      'Povećanje broja zakazivanja usluga putem sajta za 45%',
+      'Poboljšanje zadovoljstva klijenata sa prosečnom ocenom od 4.9/5',
+      'Povećanje vidljivosti na pretraživačima sa 20% više organskog saobraćaja',
+    ],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma'],
+    year: '2026',
+    duration: '14 dana',
+    url: 'https://spa-deluxe.hok.rs',
+  },
+  {
+    id: 'ketering-website',
+    title: 'Web sajt za Ketering Usluge',
+    category: 'UI/UX Dizajn & Izrada',
+    client: 'Ketering Firma "Ketering Smederevo"',
+    thumbnail: '/projects/ketering/1.png',
+    images: ['/projects/ketering/1.png'],
+    description:
+      'Dizajn i razvoj modernog, responzivnog web sajta za ketering firmu "Ketering Smederevo", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.',
+    problem:
+      'Klijent je imao zastarelu web stranicu koja nije bila prilagođena mobilnim uređajima, što je rezultiralo niskom stopom angažmana i gubitkom potencijalnih klijenata. Potreban im je moderan, responzivan dizajn koji bi poboljšao korisničko iskustvo i povećao vidljivost na pretraživačima.',
+    solution:
+      'Kreirao sam moderan i responzivan dizajn sa fokusom na jednostavnost korišćenja. Implementirao sam funkcionalnosti poput online zakazivanja, detaljnih profila usluga, i interaktivnih mapa lokacije. Koristio sam React i Tailwind CSS za frontend, a Node.js za backend razvoj. Takođe sam optimizovao sadržaj sajta za SEO kako bi povećao vidljivost na pretraživačima.',
+    results: [
+      'Povećanje angažmana korisnika za 60% u prva tri meseca',
+      'Povećanje broja zakazivanja usluga putem sajta za 45%',
+      'Poboljšanje zadovoljstva klijenata sa prosečnom ocenom od 4.9/5',
+      'Povećanje vidljivosti na pretraživačima sa 20% više organskog saobraćaja',
+    ],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma'],
+    year: '2026',
+    duration: '14 dana',
+    url: 'https://ketering.hok.rs',
+  },
+  {
     id: 'dashboard-grooming-pasa',
     title: 'Aplikacija za Grooming Pasa ',
     category: 'UI/UX Dizajn & Izrada',

@@ -59,6 +59,12 @@ const common = {
     'Increased search engine visibility with 20% more organic traffic',
   'Povećanje angažmana korisnika za 50% u prva dva meseca':
     'Increased user engagement by 50% in the first two months',
+  'Web sajt za Spa Centar': 'Website for Spa Center',
+  'Dizajn i razvoj modernog, responzivnog web sajta za spa centar "Deluxe", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the "Deluxe" spa center, focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Web sajt za Ketering Usluge': 'Website for Catering Services',
+  'Dizajn i razvoj modernog, responzivnog web sajta za ketering firmu "Ketering Smederevo", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the catering company "Ketering Smederevo", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
   // packages section
   'Paketi & Cene': 'Packages & Pricing',
   'Transparentne cene bez skrivenih troškova — izaberi paket koji odgovara tvom projektu':

@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "allowImportingTsExtensions": false,
     "incremental": true,
     "plugins": [
@@ -24,18 +24,42 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@context/*": ["./src/context/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@service/*": ["./src/service/*"],
-      "@icons/*": ["./src/icons/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@app/*": ["./src/app/*"],
-      "@i18n/*": ["./src/i18n/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@service/*": [
+        "./src/service/*"
+      ],
+      "@icons/*": [
+        "./src/icons/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@i18n/*": [
+        "./src/i18n/*"
+      ]
     }
   },
   "include": [
@@ -47,5 +71,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
