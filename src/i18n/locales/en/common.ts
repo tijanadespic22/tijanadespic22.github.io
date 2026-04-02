@@ -146,6 +146,18 @@ const common = {
   'Zbog ugovornih obaveza i zaštite poslovnih informacija klijenata, određeni projekti nisu\njavno dostupni. Ukoliko vas zanima detaljniji uvid u moj rad, slobodno me kontaktirajte\n — dodatne primere mogu podeliti direktno i diskretno.':
     "Due to contractual obligations and the protection of clients' business information, certain projects are not publicly available. If you are interested in a more detailed insight into my work, feel free to contact me — I can share additional examples directly and discreetly.",
   'Imaš projekat na umu?': 'Have a project in mind?',
+  'Dizajn i razvoj modernog, responzivnog web sajta za Studio Forma, sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for Studio Forma, focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Dizajn i razvoj modernog, responzivnog web sajta za fudbalski klub "Loznica Junior", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the football club "Loznica Junior", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Dizajn i razvoj web aplikacije za praćenje i upravljanje vodoinstalaterskim uslugama, uključujući zakazivanje, praćenje istorije usluga i analitiku zadovoljstva klijenata.':
+    'Design and development of a web application for tracking and managing plumbing services, including scheduling, service history tracking, and customer satisfaction analytics.',
+  'Web sajt za Studio Forma': 'Website for Studio Forma',
+  'Web sajt za FK Loznica Junior': 'Website for FK Loznica Junior',
+  'Aplikacija za Vodoinstalaterske Usluge': 'Application for Plumbing Services',
+  'Web sajt za Rent a Car': 'Website for Rent a Car',
+  'Dizajn i razvoj modernog, responzivnog web sajta za rent a car firmu "AutoRent", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the car rental company "AutoRent", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
 };
 
 export default common;
