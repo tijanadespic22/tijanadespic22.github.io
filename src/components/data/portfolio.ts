@@ -1,5 +1,19 @@
 const caseStudies: CaseStudy[] = [
   {
+    id: 'max-detailing-website',
+    title: 'Web sajt za Car detailing',
+    category: 'UI/UX Dizajn & Izrada',
+    client: 'Car Detailing "Max Detailing"',
+    thumbnail: '/projects/max-detailing/1.png',
+    images: ['/projects/max-detailing/1.png'],
+    description:
+      'Dizajn i razvoj modernog, responzivnog web sajta za car detailing firmu "Max Detailing", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma'],
+    year: '2025',
+    duration: '1 meseca',
+    url: 'https://max-detailing.hok.rs',
+  },
+  {
     id: 'rent-a-car-website',
     title: 'Web sajt za Rent a Car',
     category: 'UI/UX Dizajn & Izrada',

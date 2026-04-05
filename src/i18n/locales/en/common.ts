@@ -158,6 +158,9 @@ const common = {
   'Web sajt za Rent a Car': 'Website for Rent a Car',
   'Dizajn i razvoj modernog, responzivnog web sajta za rent a car firmu "AutoRent", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
     'Design and development of a modern, responsive website for the car rental company "AutoRent", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Web sajt za Car detailing': 'Website for Car Detailing',
+  'Dizajn i razvoj modernog, responzivnog web sajta za car detailing firmu "Max Detailing", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the car detailing company "Max Detailing", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
 };
 
 export default common;
