@@ -2,10 +2,10 @@ import {ReactNode} from 'react';
 import './globals.css';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
+import I18nProvider from '@/components/I18nProvider';
 import type {Metadata} from 'next';
 import '@i18n/localeConfig';
-
-const BASE_URL = 'https://tijanadespic.hok.rs';
+import {BASE_URL} from '@constants/website';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -207,7 +207,9 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
           'flex min-h-full flex-col bg-black/10 transition-colors duration-300 dark:bg-black/90'
         }>
         <Navigation />
-        {children}
+        <I18nProvider>
+          {children}
+        </I18nProvider>
         <Footer />
       </body>
     </html>

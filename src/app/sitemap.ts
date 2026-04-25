@@ -1,8 +1,7 @@
 import type {MetadataRoute} from 'next';
+import {BASE_URL} from '@constants/website';
 
 export const dynamic = 'force-static';
-
-const BASE_URL = 'https://tijanadespic.hok.rs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
