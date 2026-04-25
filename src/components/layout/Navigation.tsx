@@ -22,6 +22,7 @@ const homeLinks = [
 
 const pageLinks = [
   {href: '/projects', title: 'Svi projekti'},
+  {href: '/blog', title: 'Blog'},
   {href: '/about', title: 'O meni'},
 ];
 
@@ -65,6 +66,7 @@ const Navigation = () => {
   } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
+
   const pathname = usePathname();
   const isHome = pathname === '/';
 
