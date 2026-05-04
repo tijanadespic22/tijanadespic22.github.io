@@ -1,5 +1,19 @@
 const caseStudies: CaseStudy[] = [
   {
+    id: 'sarene-carape-webshop',
+    title: 'Webshop za Šarene Čarape',
+    category: 'UI/UX Dizajn & Izrada',
+    client: 'Šarene čarape',
+    thumbnail: '/projects/sarene-carape/1.png',
+    images: ['/projects/sarene-carape/1.png'],
+    description:
+      'Dizajn i razvoj modernog, responzivnog web sajta za webshop "Šarene Carape", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Figma', 'Stripe API'],
+    year: '2026',
+    duration: '2 meseca',
+    url: 'https://sarene-carape.hok.rs',
+  },
+  {
     id: 'max-detailing-website',
     title: 'Web sajt za Car detailing',
     category: 'UI/UX Dizajn & Izrada',

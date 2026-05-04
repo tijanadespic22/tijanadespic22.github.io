@@ -161,6 +161,9 @@ const common = {
   'Web sajt za Car detailing': 'Website for Car Detailing',
   'Dizajn i razvoj modernog, responzivnog web sajta za car detailing firmu "Max Detailing", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
     'Design and development of a modern, responsive website for the car detailing company "Max Detailing", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Dizajn i razvoj modernog, responzivnog web sajta za webshop "Šarene Carape", sa fokusom na poboljšanje korisničkog iskustva, povećanje angažmana i konverzija kroz intuitivan interfejs i optimizaciju sadržaja.':
+    'Design and development of a modern, responsive website for the webshop "Šarene Carape", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
+  'Webshop za Šarene Čarape': 'Webshop for Šarene čarape',
 };
 
 export default common;
