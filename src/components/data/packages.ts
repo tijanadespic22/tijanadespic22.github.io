@@ -3,6 +3,7 @@ const packages: Package[] = [
     title: 'Starter',
     subtitle: 'Savršeno za početnike i male biznise',
     price: 'od 99€',
+    promoPrice: '50€',
     features: [
       'Logo dizajn (3 koncepta)',
       'PNG, SVG i PDF formati',
@@ -17,6 +18,7 @@ const packages: Package[] = [
     title: 'Web',
     subtitle: 'Profesionalni sajt koji radi za tebe',
     price: 'od 349€',
+    promoPrice: '150€',
     features: [
       'Do 5 stranica',
       'Responzivan dizajn (mobile/tablet/desktop)',
@@ -32,6 +34,7 @@ const packages: Package[] = [
     title: 'Pro',
     subtitle: 'Kompletno digitalno prisustvo',
     price: 'od 699€',
+    promoPrice: 'od 349€',
     priceNote: 'Najpopularniji',
     features: [
       'Logo + Branding paket',
