@@ -22,7 +22,7 @@ const Hero = () => {
     <section className={'relative flex min-h-screen items-center justify-center overflow-hidden'}>
       <HeroParticles
         id={'home-hero-particles'}
-        particleCount={240}
+        particleCount={120}
         className={'opacity-70'}
       />
       <div
@@ -108,7 +108,9 @@ const Hero = () => {
             </p>
             <div className={'flex items-center gap-2'}>
               <span className={'h-2 w-2 animate-pulse rounded-full bg-green-500'} />
-              <span className={'text-sm font-semibold dark:text-white'}>{t('Open for work ✦')}</span>
+              <span className={'text-sm font-semibold dark:text-white'}>
+                {t('Open for work ✦')}
+              </span>
             </div>
           </div>
         </div>
