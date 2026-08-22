@@ -28,91 +28,105 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={"rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800"}>
-      <h3 className={"mb-6 text-2xl dark:text-white"}>{t('Pošaljite Upit')}</h3>
+    <div
+      className={
+        'rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800'
+      }>
+      <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Pošaljite Upit')}</h3>
 
       {isSubmitted ? (
-        <div className={"py-12 text-center"}>
-          <div className={"mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40"}>
+        <div className={'py-12 text-center'}>
+          <div
+            className={
+              'mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40'
+            }>
             <SendIcon
               height={32}
               width={32}
             />
           </div>
-          <h4 className={"mb-2 text-xl dark:text-white"}>{t('Uspešno poslato!')}</h4>
-          <p className={"text-gray-600 dark:text-gray-400"}>
+          <h4 className={'mb-2 text-xl dark:text-white'}>{t('Uspešno poslato!')}</h4>
+          <p className={'text-gray-600 dark:text-gray-400'}>
             {t('Odgovoriću vam u najkraćem mogućem roku.')}
           </p>
         </div>
       ) : (
         <form
-          className={"space-y-4"}
+          className={'space-y-4'}
           onSubmit={handleSubmit(onSubmit)}>
           <Controller
-            name={"name"}
+            name={'name'}
             control={control}
             rules={{required: true}}
             render={({field}) => (
               <div>
                 <label
-                  htmlFor={"name"}
-                  className={"mb-2 block text-sm font-medium dark:text-gray-300"}>
+                  htmlFor={'name'}
+                  className={'mb-2 block text-sm font-medium dark:text-gray-300'}>
                   {t('Ime i prezime *')}
                 </label>
                 <input
                   {...field}
-                  className={"w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500"}
+                  className={
+                    'w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500'
+                  }
                   placeholder={t('Vaše ime')}
                 />
               </div>
             )}
           />
           <Controller
-            name={"email"}
+            name={'email'}
             control={control}
             rules={{required: true}}
             render={({field}) => (
               <div>
                 <label
-                  htmlFor={"email"}
-                  className={"mb-2 block text-sm font-medium dark:text-gray-300"}>
+                  htmlFor={'email'}
+                  className={'mb-2 block text-sm font-medium dark:text-gray-300'}>
                   {t('Email adresa *')}
                 </label>
                 <input
                   {...field}
-                  type={"email"}
-                  className={"w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500"}
+                  type={'email'}
+                  className={
+                    'w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500'
+                  }
                   placeholder={t('vas@email.com')}
                 />
               </div>
             )}
           />
           <Controller
-            name={"message"}
+            name={'message'}
             control={control}
             rules={{required: true}}
             render={({field}) => (
               <div>
                 <label
-                  htmlFor={"message"}
-                  className={"mb-2 block text-sm font-medium dark:text-gray-300"}>
+                  htmlFor={'message'}
+                  className={'mb-2 block text-sm font-medium dark:text-gray-300'}>
                   {t('Poruka *')}
                 </label>
                 <textarea
                   {...field}
                   rows={5}
-                  className={"w-full resize-none rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500"}
+                  className={
+                    'w-full resize-none rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-500'
+                  }
                   placeholder={t('Opišite vaš projekat...')}
                 />
               </div>
             )}
           />
           <button
-            type={"submit"}
-            className={"group flex w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-4 text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"}>
+            type={'submit'}
+            className={
+              'group flex w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-4 text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
+            }>
             {t('Pošalji Poruku')}
             <SendIcon
-              className={"transition group-hover:translate-x-1"}
+              className={'transition group-hover:translate-x-1'}
               height={20}
               width={20}
             />
@@ -127,35 +141,38 @@ const Contact = () => {
   const {t} = useTranslation();
   return (
     <section
-      id={"contact"}
-      className={"relative overflow-hidden py-24"}>
+      id={'contact'}
+      className={'relative overflow-hidden py-24'}>
       <HeroParticles
         id={'home-contact-particles'}
-        particleCount={120}
-        className={'opacity-35'}
+        particleCount={200}
       />
-      <div className={"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"}>
-        <div className={"relative z-10 mb-16 text-center"}>
-          <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Započnimo Projekat')}</h2>
-          <p className={"mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400"}>
+      <div className={'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'}>
+        <div className={'relative z-10 mb-16 text-center'}>
+          <h2 className={'mb-4 text-4xl sm:text-5xl dark:text-white'}>{t('Započnimo Projekat')}</h2>
+          <p className={'mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400'}>
             {t('Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite')}
           </p>
         </div>
 
-        <div className={"relative z-10 grid gap-12 lg:grid-cols-2"}>
+        <div className={'relative z-10 grid gap-12 lg:grid-cols-2'}>
           {/* Form u Suspense */}
           <Suspense
             fallback={
-              <div className={"h-96 animate-pulse rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800"} />
+              <div
+                className={
+                  'h-96 animate-pulse rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800'
+                }
+              />
             }>
             <ContactForm />
           </Suspense>
 
           {/* Contact Info */}
-          <div className={"space-y-8"}>
+          <div className={'space-y-8'}>
             <div>
-              <h3 className={"mb-6 text-2xl dark:text-white"}>{t('Kontakt Informacije')}</h3>
-              <div className={"space-y-4"}>
+              <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Kontakt Informacije')}</h3>
+              <div className={'space-y-4'}>
                 {contactItems.map((item, index) => (
                   <Link
                     key={'contact-item-' + index}
@@ -170,10 +187,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <div className={"text-sm text-gray-600 dark:text-gray-400"}>
+                      <div className={'text-sm text-gray-600 dark:text-gray-400'}>
                         {t(item.title)}
                       </div>
-                      <div className={"font-medium dark:text-white"}>{t(item?.value)}</div>
+                      <div className={'font-medium dark:text-white'}>{t(item?.value)}</div>
                     </div>
                   </Link>
                 ))}

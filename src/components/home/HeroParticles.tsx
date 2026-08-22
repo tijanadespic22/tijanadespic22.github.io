@@ -3,6 +3,7 @@ import {memo, useEffect, useMemo, useState} from 'react';
 import Particles, {ParticlesProvider} from '@tsparticles/react';
 import {loadSlim} from '@tsparticles/slim';
 import type {Engine, ISourceOptions} from '@tsparticles/engine';
+import {cn} from '@utils/CN';
 
 const initParticles = async (engine: Engine) => {
   await loadSlim(engine);
@@ -41,35 +42,31 @@ const HeroParticles = ({
       fpsLimit: 60,
       detectRetina: true,
       particles: {
-        number: {
-          value: particleCount,
-          density: {enable: false},
+        color: {value: isDark ? '#c7d2fe' : '#000000'},
+        move: {
+          enable: true,
+          speed: {min: 0.3, max: 1.0},
+          random: true,
         },
-        shape: {type: 'circle'},
-        color: {value: isDark ? '#ffffff' : '#000000'},
+        number: {value: particleCount, density: {enable: true, area: 800}},
         opacity: {
-          value: {min: 0.7, max: 1},
+          value: {min: 0.15, max: 0.8},
+          animation: {enable: true, speed: 0.5, sync: false},
         },
         size: {
-          value: {min: 1.2, max: 2.8},
-        },
-        move: {
-          enable: false,
-          speed: 0,
+          value: {min: 0.8, max: 3},
+          animation: {enable: true, speed: 1.2, sync: false},
         },
         links: {
           enable: true,
-          color: isDark ? '#ffffff' : '#000000',
-          opacity: 0.55,
-          distance: 135,
-          width: 1.2,
+          color: isDark ? '#c7d2fe' : '#000000',
+          opacity: 0.2,
+          distance: 180,
+          width: 0.8,
         },
-      },
-      interactivity: {
-        events: {
-          onHover: {enable: false, mode: 'grab'},
-          onClick: {enable: false, mode: 'push'},
-          resize: {enable: true},
+        shape: {type: 'circle'},
+        twinkle: {
+          particles: {enable: true, frequency: 0.08, opacity: 1},
         },
       },
     }),
@@ -80,7 +77,7 @@ const HeroParticles = ({
     <ParticlesProvider init={initParticles}>
       <Particles
         id={id}
-        className={`pointer-events-none absolute inset-0 h-full w-full ${className ?? ''}`}
+        className={cn('pointer-events-none absolute inset-0 h-full w-full', className)}
         options={options}
       />
     </ParticlesProvider>

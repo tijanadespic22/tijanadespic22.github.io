@@ -22,8 +22,7 @@ const Hero = () => {
     <section className={'relative flex min-h-screen items-center justify-center overflow-hidden'}>
       <HeroParticles
         id={'home-hero-particles'}
-        particleCount={120}
-        className={'opacity-70'}
+        particleCount={200}
       />
       <div
         className={
