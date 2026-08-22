@@ -16,11 +16,9 @@ const Packages = () => {
       <div className={"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"}>
         {/* Header */}
         <div className={"mb-16 text-center"}>
-          <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Paketi & Cene')}</h2>
+          <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Paketi')}</h2>
           <p className={"mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400"}>
-            {t(
-              'Transparentne cene bez skrivenih troškova — izaberi paket koji odgovara tvom projektu',
-            )}
+            {t('Izaberi paket usluga koji najviše odgovara tvom poslovanju')}
           </p>
         </div>
 
@@ -33,28 +31,13 @@ const Packages = () => {
               }}
               key={index}
               className={cn(
-                'relative flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:z-10 hover:scale-[1.2] hover:shadow-xl',
+                'relative flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:z-10 hover:scale-[1.06] hover:shadow-xl',
                 'border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800',
                 {
                   'border-transparent bg-linear-to-b from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30':
                     pkg.highlighted,
                 },
               )}>
-              {(pkg.promoPrice || pkg.priceNote) ? (
-                <div className={"absolute -top-3.5 left-0 right-0 flex justify-center gap-2 px-4"}>
-                  {pkg.priceNote ? (
-                    <span className={"inline-flex items-center gap-1 rounded-full bg-linear-to-r from-yellow-400 to-orange-400 px-3 py-1 text-xs font-semibold text-black shadow"}>
-                      {"⭐ "}{t(pkg.priceNote)}
-                    </span>
-                  ) : null}
-                  {pkg.promoPrice ? (
-                    <span className={"inline-flex items-center gap-1 rounded-full bg-linear-to-r from-rose-500 to-orange-400 px-3 py-1 text-xs font-semibold text-white shadow-md"}>
-                      {"🔥 Promo"}
-                    </span>
-                  ) : null}
-                </div>
-              ) : null}
-
               {pkg.iconName ? (
                 <div
                   className={cn('mb-4 flex h-12 w-12 items-center justify-center rounded-xl', {
@@ -78,7 +61,7 @@ const Packages = () => {
                   'text-white': pkg.highlighted,
                   'text-gray-900 dark:text-white': !pkg.highlighted,
                 })}>
-                {pkg.title}
+                {t(pkg.title)}
               </h3>
               <p
                 className={cn('mb-5 text-sm', {
@@ -87,44 +70,6 @@ const Packages = () => {
                 })}>
                 {t(pkg.subtitle)}
               </p>
-
-              <div className={"mb-6"}>
-                {pkg.promoPrice ? (
-                  <div className={"flex flex-col gap-1"}>
-                    <span
-                      className={cn('text-sm line-through opacity-60', {
-                        'text-white': pkg.highlighted,
-                        'text-gray-400 dark:text-gray-500': !pkg.highlighted,
-                      })}>
-                      {t(pkg.price)}
-                    </span>
-                    <div className={"flex items-baseline gap-2"}>
-                      <span
-                        className={cn('text-3xl font-bold', {
-                          'text-white': pkg.highlighted,
-                          'text-rose-500 dark:text-rose-400': !pkg.highlighted,
-                        })}>
-                        {pkg.promoPrice}
-                      </span>
-                      <span
-                        className={cn('text-xs font-medium rounded-full px-2 py-0.5', {
-                          'bg-white/20 text-white': pkg.highlighted,
-                          'bg-rose-100 text-rose-600 dark:bg-rose-900/40 dark:text-rose-400': !pkg.highlighted,
-                        })}>
-                        {'Promo'}
-                      </span>
-                    </div>
-                  </div>
-                ) : (
-                  <span
-                    className={cn('text-3xl font-bold', {
-                      'text-white': pkg.highlighted,
-                      'text-gray-900 dark:text-white': !pkg.highlighted,
-                    })}>
-                    {t(pkg.price)}
-                  </span>
-                )}
-              </div>
 
               <div
                 className={cn('mb-6 h-px w-full', {

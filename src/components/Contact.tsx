@@ -8,6 +8,7 @@ import Icon from '@/icons/Icon';
 import {useSearchParams} from 'next/navigation';
 import {sendMessage} from '@/services/Messanger';
 import {useTranslation} from 'react-i18next';
+import HeroParticles from '@components/home/HeroParticles';
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
@@ -127,16 +128,21 @@ const Contact = () => {
   return (
     <section
       id={"contact"}
-      className={"py-24"}>
+      className={"relative overflow-hidden py-24"}>
+      <HeroParticles
+        id={'home-contact-particles'}
+        particleCount={120}
+        className={'opacity-35'}
+      />
       <div className={"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"}>
-        <div className={"mb-16 text-center"}>
+        <div className={"relative z-10 mb-16 text-center"}>
           <h2 className={"mb-4 text-4xl sm:text-5xl dark:text-white"}>{t('Započnimo Projekat')}</h2>
           <p className={"mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400"}>
             {t('Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite')}
           </p>
         </div>
 
-        <div className={"grid gap-12 lg:grid-cols-2"}>
+        <div className={"relative z-10 grid gap-12 lg:grid-cols-2"}>
           {/* Form u Suspense */}
           <Suspense
             fallback={

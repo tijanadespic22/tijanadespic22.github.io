@@ -19,18 +19,40 @@ const common = {
   'Transformišem ideje u <0>digitalna iskustva</0>':
     'I transform ideas into <0>digital experiences</0>',
   // services section
-  'Šta Nudim': 'What I Offer',
+  'Sve što Vam treba na jednom mestu': 'Everything you need in one place',
   'Kompletan spektar usluga od koncepta do implementacije':
     'A full range of services from concept to implementation',
-  'Logo Dizajn': 'Logo Design',
-  'UI/UX Dizajn': 'UI/UX Design',
-  'Izrada Web Sajtova': 'Website Development',
-  'Izrada profesionalnog i jedinstvenog logotipa koji savršeno predstavlja vaš biznis. Svaki dizajn je pažljivo osmišljen da ostavi snažan vizuelni utisak i izgradi prepoznatljiv identitet.':
-    'Creating a professional and unique logo that perfectly represents your business. Each design is carefully crafted to leave a strong visual impression and build a recognizable identity.',
-  'Kreiram intuitivna i vizuelno privlačna korisnička iskustva koja rešavaju stvarne probleme. Od istraživanja korisnika do finalnog dizajna, svaki detalj je pažljivo osmišljen.':
-    'I create intuitive and visually appealing user experiences that solve real problems. From user research to final design, every detail is carefully crafted.',
-  'Razvijam moderne, brze i responsive web sajtove koristeći najnovije tehnologije. Svaki projekat je optimizovan za performanse i SEO sa čistim, održivim kodom.':
-    'I develop modern, fast, and responsive websites using the latest technologies. Each project is optimized for performance and SEO with clean, maintainable code.',
+  'Prevucite levo-desno da vidite sve usluge': 'Swipe left-right to see all services',
+  'Administrativni Poslovi': 'Administrative Tasks',
+  'Pouzdana svakodnevna administrativna podrška kako bi vaš tim imao više vremena za ključne poslovne aktivnosti.':
+    'Reliable daily administrative support so your team has more time for core business activities.',
+  'Odgovaranje na mejlove': 'Replying to emails',
+  'Zakazivanje sastanaka': 'Scheduling meetings',
+  'Unos i obrada podataka': 'Data entry and processing',
+  'Organizacija dokumenata': 'Document organization',
+  'Priprema izveštaja i praćenje rokova': 'Report preparation and deadline tracking',
+  'Marketing i Društvene Mreže': 'Marketing and Social Media',
+  'Podrška za digitalni nastup brenda kroz redovnu komunikaciju, sadržaj i aktivnosti koje povećavaju vidljivost.':
+    'Support for your brand’s digital presence through regular communication, content, and growth activities.',
+  'Vođenje stranice': 'Page management',
+  'Odgovaranje na poruke i komentare': 'Replying to messages and comments',
+  'Pravljenje objava': 'Creating posts',
+  'Slanje newsletter-a': 'Sending newsletters',
+  'Istraživanje tržišta': 'Market research',
+  'Tehnička Podrška i Prodaja': 'Technical Support and Sales',
+  'Operativna tehnička i prodajna podrška za online poslovanje, od održavanja sadržaja do komunikacije sa kupcima.':
+    'Operational technical and sales support for online business, from content maintenance to customer communication.',
+  'Ažuriranje sajtova': 'Website updates',
+  'Unos proizvoda u radnje': 'Adding products to stores',
+  'Komunikacija sa kupcima': 'Customer communication',
+  'Online podrška': 'Online support',
+  'Izrada Websajtova od Nule': 'Website Development from Scratch',
+  'Kompletna izrada modernih web sajtova od prve ideje do finalne objave, uz fokus na brzinu, preglednost i korisničko iskustvo.':
+    'Full creation of modern websites from idea to launch, focused on speed, clarity, and user experience.',
+  'Planiranje strukture sajta': 'Website structure planning',
+  'Dizajn i razvoj od nule': 'Design and development from scratch',
+  'Responzivan prikaz za sve uređaje': 'Responsive layout for all devices',
+  'SEO osnove i tehnička optimizacija': 'SEO basics and technical optimization',
   // Projects section
   Detaljnije: 'Learn More',
   'Izdvojeni Projekti': 'Featured Projects',
@@ -67,6 +89,8 @@ const common = {
     'Design and development of a modern, responsive website for the catering company "Ketering Smederevo", focusing on improving user experience, increasing engagement, and conversions through an intuitive interface and content optimization.',
   // packages section
   'Paketi & Cene': 'Packages & Pricing',
+  'Izaberi paket usluga koji najviše odgovara tvom poslovanju':
+    'Choose the service package that best fits your business',
   'Transparentne cene bez skrivenih troškova — izaberi paket koji odgovara tvom projektu':
     'Transparent pricing with no hidden fees — choose the package that fits your project',
   'Savršeno za početnike i male biznise': 'Perfect for beginners and small businesses',

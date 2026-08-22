@@ -12,6 +12,8 @@
     "prettier:fix": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@tsparticles/react": "4.3.2",
+    "@tsparticles/slim": "4.3.2",
     "clsx": "2.1.1",
     "dayjs": "1.11.20",
     "framer-motion": "12.38.0",
