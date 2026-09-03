@@ -1,14 +1,27 @@
 'use client';
-import {memo, Suspense} from 'react';
+import {DetailedHTMLProps, HTMLAttributes, memo, ReactNode, Suspense} from 'react';
 import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@/icons/SendIcon';
-import Link from 'next/link';
+import Link, {LinkProps} from 'next/link';
 import {contactItems} from '@/components/data/contact';
 import Icon from '@/icons/Icon';
 import {useSearchParams} from 'next/navigation';
 import {sendMessage} from '@/services/Messanger';
 import {useTranslation} from 'react-i18next';
 import HeroParticles from '@components/home/HeroParticles';
+
+const LinkWrapper = ({
+  children,
+  ...props
+}: {children: ReactNode} & Partial<
+  LinkProps | DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+>) => {
+  return (props as LinkProps)?.href ? (
+    <Link {...(props as LinkProps)}>{children}</Link>
+  ) : (
+    <div {...(props as any)}>{children}</div>
+  );
+};
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
@@ -155,26 +168,17 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className={'relative z-10 grid gap-12 lg:grid-cols-2'}>
-          {/* Form u Suspense */}
-          <Suspense
-            fallback={
-              <div
-                className={
-                  'h-96 animate-pulse rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800'
-                }
-              />
-            }>
-            <ContactForm />
-          </Suspense>
-
+        <div
+          className={
+            'relative z-10 grid gap-12 rounded-2xl bg-gray-50/50 p-8 lg:grid-cols-2 dark:bg-gray-900/50'
+          }>
           {/* Contact Info */}
           <div className={'space-y-8'}>
             <div>
               <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Kontakt Informacije')}</h3>
               <div className={'space-y-4'}>
                 {contactItems.map((item, index) => (
-                  <Link
+                  <LinkWrapper
                     key={'contact-item-' + index}
                     href={item.href}
                     className={item.containerClassName}>
@@ -192,11 +196,22 @@ const Contact = () => {
                       </div>
                       <div className={'font-medium dark:text-white'}>{t(item?.value)}</div>
                     </div>
-                  </Link>
+                  </LinkWrapper>
                 ))}
               </div>
             </div>
           </div>
+          {/* Form u Suspense */}
+          <Suspense
+            fallback={
+              <div
+                className={
+                  'h-96 animate-pulse rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800'
+                }
+              />
+            }>
+            <ContactForm />
+          </Suspense>
         </div>
       </div>
     </section>

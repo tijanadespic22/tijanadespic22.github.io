@@ -1,6 +1,7 @@
 type IconName =
   | 'mail'
   | 'phone'
+  | 'mobile'
   | 'send'
   | 'calendar'
   | 'creativeCloud'

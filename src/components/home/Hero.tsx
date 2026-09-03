@@ -26,11 +26,11 @@ const Hero = () => {
       />
       <div
         className={
-          'relative z-10 mt-18 flex flex-col gap-8 md:mt-0 lg:flex-row lg:items-center lg:justify-between'
+          'relative z-10 mt-18 flex flex-col gap-6 md:mt-0 lg:flex-row lg:items-center lg:justify-center'
         }>
         <div
           className={
-            'relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-md sm:p-8 lg:p-10 dark:border-gray-700/70 dark:bg-gray-900/50'
+            'relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white text-center shadow-2xl backdrop-blur-md sm:p-8 lg:p-10 dark:border-gray-700/70 dark:bg-gray-900/50'
           }>
           <div className={'relative z-10 space-y-8'}>
             <div
@@ -42,16 +42,16 @@ const Hero = () => {
               </span>
             </div>
 
-            <h1 className={'mx-auto max-w-4xl text-3xl sm:text-3xl lg:text-7xl dark:text-white'}>
+            <h1 className={'mx-auto max-w-2xl text-3xl sm:text-3xl lg:text-7xl dark:text-white'}>
               <Trans
-                i18nKey={'Transformišem ideje u <0>digitalna iskustva</0>'}
+                i18nKey={'Izrada web sajtova koji donose <0>nove klijente</0>'}
                 components={[<HeaderComponent key={'gradient'} />]}
               />
             </h1>
 
             <p className={'mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400'}>
               {t(
-                'Treba ti logo koji ostavlja utisak, sajt koji prodaje ili aplikacija koja radi — bez\nobzira na projekat, tu sam da ga pretvorim u nešto što funkcioniše i izgleda odlično.',
+                'Kreiram moderne, brze i responzivne web sajtove za brendove, mala preduzeća i startape - od prve ideje do lansiranja.',
               )}
             </p>
 
@@ -100,7 +100,7 @@ const Hero = () => {
           />
           <div
             className={
-              'absolute -right-3 -bottom-3 rounded-2xl border border-gray-200 bg-white px-4 py-2.5 shadow-lg dark:border-gray-700 dark:bg-gray-800'
+              'absolute right-3 bottom-3 rounded-2xl border border-gray-200 bg-white px-4 py-2.5 shadow-lg dark:border-gray-700 dark:bg-gray-800'
             }>
             <p className={'mb-0.5 text-xs text-gray-500 dark:text-gray-400'}>
               {t('Dostupna za projekte')}
@@ -112,15 +112,6 @@ const Hero = () => {
               </span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className={'absolute bottom-8 left-1/2 z-10 -translate-x-1/2 transform animate-bounce'}>
-        <div
-          className={
-            'flex h-10 w-6 items-start justify-center rounded-full border-2 border-gray-400 p-2 dark:border-gray-500'
-          }>
-          <div className={'h-3 w-1.5 rounded-full bg-gray-400 dark:bg-gray-500'}></div>
         </div>
       </div>
     </section>

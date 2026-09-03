@@ -26,11 +26,13 @@ import GraphqlIcon from '@/icons/GraphqlIcon';
 import BunIcon from '@/icons/BunIcon';
 import InstagramIcon from '@/icons/InstagramIcon';
 import LinkedInIcon from '@/icons/LinkedInIcon';
+import MobileIcon from '@/icons/MobileIcon';
 
 const Icon = ({name, ...props}: {name: IconName} & Icon) => {
   const icons: Record<IconName, FC<Icon>> = {
     mail: MailIcon,
     phone: PhoneIcon,
+    mobile: MobileIcon,
     send: SendIcon,
     calendar: CalendarIcon,
     creativeCloud: CreativeCloudIcon,

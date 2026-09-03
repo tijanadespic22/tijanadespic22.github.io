@@ -1,6 +1,6 @@
 type ContactItem = {
   title: string;
-  href: string;
+  href?: string;
   value: string;
   icon: IconName;
   iconClassName: string;
