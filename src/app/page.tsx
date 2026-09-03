@@ -5,6 +5,7 @@ import Contact from '@/components/Contact';
 import Packages from '@components/home/Packages';
 import type {Metadata} from 'next';
 import {memo} from 'react';
+import Blogs from '@components/home/Blogs';
 
 export const metadata: Metadata = {
   title: 'Tijana Despić — UI/UX Dizajn & Web Development | Srbija',
@@ -25,6 +26,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Portfolio />
+      <Blogs />
       <Packages />
       <Contact />
     </>

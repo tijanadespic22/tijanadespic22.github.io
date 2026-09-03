@@ -34,80 +34,82 @@ const Blogs = () => {
           </p>
         </div>
 
-        <div className={'space-y-8'}>
+        <div className={'flex flex-col gap-8 space-y-8'}>
           {blogs.map((blog, index) => (
-            <article
-              id={blog.id}
-              key={blog.id ?? index}
-              className={
-                'group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900'
-              }>
-              <div className={'grid gap-0 lg:grid-cols-[1.2fr_0.8fr]'}>
-                <div className={'relative min-h-72 overflow-hidden bg-gray-100 dark:bg-gray-800'}>
-                  <Image
-                    src={blog.landingImage}
-                    alt={blog.title}
-                    fill
-                    sizes={'(max-width: 1024px) 100vw, 45vw'}
-                    className={
-                      'object-cover transition-transform duration-500 group-hover:scale-105'
-                    }
-                  />
-                  <div
-                    className={
-                      'absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent'
-                    }
-                  />
-                  <div className={'absolute right-5 bottom-5 left-5'}>
-                    <div className={'mb-3 flex flex-wrap gap-2 text-xs font-semibold'}>
-                      <span
-                        className={'rounded-full bg-white/15 px-3 py-1 text-white backdrop-blur'}>
-                        {new Date(blog.date).toLocaleDateString('sr-RS')}
-                      </span>
-                      <span
-                        className={'rounded-full bg-white/15 px-3 py-1 text-white backdrop-blur'}>
-                        {blog.author}
-                      </span>
-                    </div>
-                    <h2 className={'max-w-2xl text-3xl leading-tight font-semibold text-white'}>
-                      {blog.title}
-                    </h2>
-                  </div>
-                </div>
-
-                <div className={'flex flex-col justify-between p-6 sm:p-8'}>
-                  <div>
-                    <div
+            <Link
+              href={`/blogs/${blog.id}`}
+              key={blog.id ?? index}>
+              <article
+                id={blog.id}
+                className={
+                  'group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900'
+                }>
+                <div className={'grid gap-0 lg:grid-cols-[1.2fr_0.8fr]'}>
+                  <div className={'relative min-h-72 overflow-hidden bg-gray-100 dark:bg-gray-800'}>
+                    <Image
+                      src={blog.landingImage}
+                      alt={blog.title}
+                      fill
+                      sizes={'(max-width: 1024px) 100vw, 45vw'}
                       className={
-                        'mb-4 inline-flex rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-blue-700 uppercase dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300'
-                      }>
-                      {t('Pročitaj više')}
-                    </div>
-                    <div
-                      className={
-                        'prose prose-gray prose-p:leading-relaxed dark:prose-invert max-w-none'
-                      }>
-                      <Markdown>{blog.shortDescription}</Markdown>
-                    </div>
-                  </div>
-
-                  <Link
-                    href={`/blogs/${blog.id}`}
-                    className={
-                      'group mt-8 inline-flex items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
-                    }>
-                    {t('Otvori blog')}
-                    <ArrowIcon
-                      width={16}
-                      height={16}
-                      className={
-                        'rotate-90 transition-transform duration-200 group-hover:translate-x-1'
+                        'object-cover transition-transform duration-500 group-hover:scale-105'
                       }
                     />
-                  </Link>
+                    <div
+                      className={
+                        'absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent'
+                      }
+                    />
+                    <div className={'absolute right-5 bottom-5 left-5'}>
+                      <div className={'mb-3 flex flex-wrap gap-2 text-xs font-semibold'}>
+                        <span
+                          className={'rounded-full bg-white/15 px-3 py-1 text-white backdrop-blur'}>
+                          {new Date(blog.date).toLocaleDateString('sr-RS')}
+                        </span>
+                        <span
+                          className={'rounded-full bg-white/15 px-3 py-1 text-white backdrop-blur'}>
+                          {blog.author}
+                        </span>
+                      </div>
+                      <h2 className={'max-w-2xl text-3xl leading-tight font-semibold text-white'}>
+                        {blog.title}
+                      </h2>
+                    </div>
+                  </div>
+
+                  <div className={'flex flex-col justify-between p-6 sm:p-8'}>
+                    <div>
+                      <div
+                        className={
+                          'mb-4 inline-flex rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold tracking-[0.18em] text-blue-700 uppercase dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300'
+                        }>
+                        {t('Pročitaj više')}
+                      </div>
+                      <div
+                        className={
+                          'prose prose-gray prose-p:leading-relaxed dark:prose-invert max-w-none'
+                        }>
+                        <Markdown>{blog.shortDescription}</Markdown>
+                      </div>
+                    </div>
+
+                    <div
+                      className={
+                        'group mt-8 inline-flex items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
+                      }>
+                      {t('Otvori blog')}
+                      <ArrowIcon
+                        width={16}
+                        height={16}
+                        className={
+                          'rotate-90 transition-transform duration-200 group-hover:translate-x-1'
+                        }
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
       </section>

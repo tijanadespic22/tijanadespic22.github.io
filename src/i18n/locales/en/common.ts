@@ -169,6 +169,8 @@ const common = {
   'Pročitaj više': 'Read more',
   'Nazad na blog': 'Back to blog',
   'Otvori blog': 'Open blog',
+  'Poslednji blogovi': 'Latest blogs',
+  'Vidi sve blogove': 'See all blogs',
 };
 
 export default common;
