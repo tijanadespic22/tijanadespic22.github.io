@@ -15,8 +15,8 @@ const packages: Package[] = [
   },
   {
     title: 'Sajt za mala preduzeća',
-    price: 'od 250€',
-    promoPrice: 'od 500€',
+    price: 'od 500€',
+    promoPrice: 'od 250€',
     priceNote: 'Najpopularniji',
     features: [
       'Logo + Branding paket',

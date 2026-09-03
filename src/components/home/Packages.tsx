@@ -75,15 +75,42 @@ const Packages = () => {
                 {pkg.title}
               </h3>
 
-              <div className={'mb-6'}>
+              {pkg.promoPrice ? (
+                <div className={'mb-6 flex flex-col gap-1'}>
+                  <span
+                    className={cn('text-sm line-through opacity-60', {
+                      'text-white': pkg.highlighted,
+                      'text-gray-400 dark:text-gray-500': !pkg.highlighted,
+                    })}>
+                    {t(pkg?.price || '')}
+                  </span>
+                  <div className={'flex items-baseline gap-2'}>
+                    <span
+                      className={cn('text-3xl font-bold', {
+                        'text-white': pkg.highlighted,
+                        'text-rose-500 dark:text-rose-400': !pkg.highlighted,
+                      })}>
+                      {pkg.promoPrice}
+                    </span>
+                    <span
+                      className={cn('rounded-full px-2 py-0.5 text-xs font-medium', {
+                        'bg-white/20 text-white': pkg.highlighted,
+                        'bg-rose-100 text-rose-600 dark:bg-rose-900/40 dark:text-rose-400':
+                          !pkg.highlighted,
+                      })}>
+                      {'Promo'}
+                    </span>
+                  </div>
+                </div>
+              ) : (
                 <span
                   className={cn('text-3xl font-bold', {
                     'text-white': pkg.highlighted,
                     'text-gray-900 dark:text-white': !pkg.highlighted,
                   })}>
-                  {t(pkg?.price || 'Po dogovoru')}
+                  {t(pkg?.price || '')}
                 </span>
-              </div>
+              )}
 
               <ul className={'mb-8 flex-1 space-y-3'}>
                 {pkg.features.map((f, i) => (
