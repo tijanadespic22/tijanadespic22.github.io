@@ -16,7 +16,8 @@ const common = {
   'Na početnoj': 'Na početnoj',
   Stranice: 'Stranice',
   'UI/UX Dizajn & Web Development': 'UI/UX Dizajn & Web Development',
-  'Izrada web sajtova koji donose <0>nove klijente</0>': 'Izrada web sajtova koji donose <0>nove klijente</0>',
+  'Izrada web sajtova koji donose <0>nove klijente</0>':
+    'Izrada web sajtova koji donose <0>nove klijente</0>',
   'Kreiram moderne, brze i responzivne web sajtove za brendove, mala preduzeća i startape - od prve ideje do lansiranja.':
     'Kreiram moderne, brze i responzivne web sajtove za brendove, mala preduzeća i startape - od prve ideje do lansiranja.',
   'Ono što radim': 'Ono što radim',
@@ -56,7 +57,7 @@ const common = {
   'Profesionalni sajt koji radi za tebe': 'Profesionalni sajt koji radi za tebe',
   'Kompletno digitalno prisustvo': 'Kompletno digitalno prisustvo',
   'Za kompleksne i jedinstvene projekte': 'Za kompleksne i jedinstvene projekte',
-  'Najpopularniji': 'Najpopularniji',
+  Najpopularniji: 'Najpopularniji',
   'od 99€': 'od 99€',
   'od 349€': 'od 349€',
   'od 699€': 'od 699€',
@@ -142,7 +143,6 @@ const common = {
   'Otvori blog': 'Otvori blog',
   'Poslednji tekstovi': 'Poslednji tekstovi',
   'Vidi sve blogove': 'Vidi sve blogove',
-  Blogovi: 'Blogovi',
 };
 
 export default common;
