@@ -1,6 +1,6 @@
 type Package = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   price?: string;
   promoPrice?: string;
   priceNote?: string;

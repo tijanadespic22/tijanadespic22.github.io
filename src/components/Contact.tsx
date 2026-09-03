@@ -170,7 +170,7 @@ const Contact = () => {
 
         <div
           className={
-            'relative z-10 flex flex-col items-center gap-12 rounded-2xl bg-gray-50/50 p-8 lg:grid lg:grid-cols-2 dark:bg-gray-900/50'
+            'relative z-10 flex flex-col items-center gap-12 rounded-2xl bg-gray-50/50 p-2 lg:grid lg:grid-cols-2 dark:bg-gray-900/50'
           }>
           {/* Contact Info */}
           <div className={'space-y-8'}>
