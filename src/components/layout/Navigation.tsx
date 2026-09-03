@@ -23,6 +23,7 @@ const homeLinks = [
 const pageLinks = [
   {href: '/projects', title: 'Svi projekti'},
   {href: '/about', title: 'O meni'},
+  {href: '/blogs', title: 'Blogovi'},
 ];
 
 const Languages = [
