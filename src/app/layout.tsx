@@ -108,6 +108,11 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
                 publisher: {
                   '@id': `${BASE_URL}/#person`,
                 },
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: `${BASE_URL}/blogs?q={search_term_string}`,
+                  'query-input': 'required name=search_term_string',
+                },
               },
               {
                 '@context': 'https://schema.org',
@@ -172,7 +177,7 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
                   '@type': 'Country',
                   name: 'Serbia',
                 },
-                serviceType: ['UI/UX Dizajn', 'Web Development', 'Logo Dizajn', 'Branding'],
+                serviceType: ['UI/UX Design', 'Web Development', 'Logo Design', 'Branding'],
                 priceRange: '$$',
                 hasOfferCatalog: {
                   '@type': 'OfferCatalog',

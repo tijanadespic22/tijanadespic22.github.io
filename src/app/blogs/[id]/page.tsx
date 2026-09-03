@@ -19,15 +19,33 @@ export const generateMetadata = async ({params}: {params: Promise<Params>}): Pro
   if (!blog) return {};
 
   const title = blog.languages?.en?.title ?? blog.title;
+  const canonical = `https://tijanadespic.hok.rs/blogs/${blog.id}`;
+  const imageUrl = `https://tijanadespic.hok.rs${blog.landingImage}`;
+  const description = blog.languages?.en?.shortDescription ?? blog.shortDescription;
 
   return {
     title: `${title} — Blog | Tijana Despić`,
-    description: blog.languages?.en?.shortDescription ?? blog.shortDescription,
-    alternates: {canonical: `https://tijanadespic.hok.rs/blogs/${blog.id}`},
+    description,
+    alternates: {canonical},
     openGraph: {
       title: `${title} — Blog | Tijana Despić`,
-      description: blog.languages?.en?.shortDescription ?? blog.shortDescription,
-      url: `https://tijanadespic.hok.rs/blogs/${blog.id}`,
+      description,
+      url: canonical,
+      type: 'article',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} — Blog | Tijana Despić`,
+      description,
+      images: [imageUrl],
     },
   };
 };

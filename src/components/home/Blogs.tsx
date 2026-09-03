@@ -65,10 +65,7 @@ const Blogs = () => {
                   </span>
                 </div>
 
-                <h3
-                  className={
-                    'mb-3 text-2xl leading-tight font-semibold text-gray-900 dark:text-white'
-                  }>
+                <h3 className={'mb-3 text-2xl font-semibold leading-tight text-gray-900 dark:text-white'}>
                   {blog.title}
                 </h3>
 
@@ -78,6 +75,7 @@ const Blogs = () => {
 
                 <Link
                   href={`/blogs/${blog.id}`}
+                  aria-label={`Otvori blog: ${blog.title}`}
                   className={
                     'group inline-flex items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
                   }>
@@ -98,6 +96,7 @@ const Blogs = () => {
         <div className={'mt-14 text-center'}>
           <Link
             href={'/blogs'}
+            aria-label={'Vidi sve blogove'}
             className={
               'group inline-flex items-center gap-2 rounded-full border border-gray-300 px-7 py-3.5 font-medium text-gray-700 transition-colors hover:border-gray-500 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-400'
             }>
