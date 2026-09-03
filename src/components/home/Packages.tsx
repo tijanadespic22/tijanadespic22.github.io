@@ -104,7 +104,7 @@ const Packages = () => {
                 </div>
               ) : (
                 <span
-                  className={cn('text-3xl font-bold', {
+                  className={cn('mb-6 text-3xl font-bold', {
                     'text-white': pkg.highlighted,
                     'text-gray-900 dark:text-white': !pkg.highlighted,
                   })}>
