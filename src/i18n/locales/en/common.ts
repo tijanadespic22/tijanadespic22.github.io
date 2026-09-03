@@ -163,6 +163,12 @@ const common = {
   'TechFlow Solutions': 'TechFlow Solutions',
   'Stomatološka Ordinacija "DentaVita"': 'Dental Clinic "DentaVita"',
   'FitLife Pro': 'FitLife Pro',
+  'JavaScript, UI/UX i web development': 'JavaScript, UI/UX and web development',
+  'Kratki tekstovi i praktična objašnjenja iz svakodnevnog rada na web sajtovima i aplikacijama.':
+    'Short texts and practical explanations from everyday work on websites and applications.',
+  'Pročitaj više': 'Read more',
+  'Nazad na blog': 'Back to blog',
+  'Otvori blog': 'Open blog',
 };
 
 export default common;
