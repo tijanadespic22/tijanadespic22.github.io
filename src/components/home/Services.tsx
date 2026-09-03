@@ -21,7 +21,7 @@ const Services = () => {
 
         <div
           className={
-            'mb-16 flex gap-6 overflow-x-scroll pt-16 pb-2 [scrollbar-width:auto] md:pt-8 lg:grid lg:grid-cols-4 lg:gap-12 lg:overflow-visible lg:pt-0 lg:pb-0 lg:[scrollbar-width:initial] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 dark:[&::-webkit-scrollbar-thumb]:bg-gray-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 dark:[&::-webkit-scrollbar-track]:bg-gray-700'
+            'mb-16 flex flex-col gap-6 overflow-visible pt-16 pb-2 [scrollbar-width:auto] md:pt-8 lg:grid lg:grid-cols-4 lg:gap-12 lg:overflow-visible lg:pt-0 lg:pb-0 lg:[scrollbar-width:initial] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-400 dark:[&::-webkit-scrollbar-thumb]:bg-gray-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-200 dark:[&::-webkit-scrollbar-track]:bg-gray-700'
           }>
           {servicesItems.map((service, index) => (
             <div

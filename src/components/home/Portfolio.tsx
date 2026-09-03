@@ -20,7 +20,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className={cn('flex gap-6', 'md:flex-row')}>
+        <div className={cn('flex flex-col gap-6', 'md:flex-row')}>
           {/*filter first 3 projects*/}
           {caseStudies.slice(0, 3).map(project => (
             <div
