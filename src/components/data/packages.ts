@@ -42,7 +42,7 @@ const packages: Package[] = [
       'Prioritetna podrška',
       'Dugoročno partnerstvo',
     ],
-    cta: 'Kontaktiraj Me',
+    cta: 'Zatraži Ponudu',
     iconName: 'website',
   },
 ];

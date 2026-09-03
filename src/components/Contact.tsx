@@ -43,7 +43,7 @@ const ContactForm = () => {
   return (
     <div
       className={
-        'rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-800'
+        '-mx-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 lg:mx-0 lg:p-8 dark:border-gray-700 dark:bg-gray-800'
       }>
       <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Pošaljite Upit')}</h3>
 
@@ -160,9 +160,9 @@ const Contact = () => {
         id={'home-contact-particles'}
         particleCount={200}
       />
-      <div className={'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'}>
+      <div className={'mx-auto max-w-7xl px-4 lg:px-8'}>
         <div className={'relative z-10 mb-16 text-center'}>
-          <h2 className={'mb-4 text-4xl sm:text-5xl dark:text-white'}>{t('Započnimo Projekat')}</h2>
+          <h2 className={'mb-4 text-4xl sm:text-5xl dark:text-white'}>{t('Započnimo projekat')}</h2>
           <p className={'mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400'}>
             {t('Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite')}
           </p>
@@ -170,7 +170,7 @@ const Contact = () => {
 
         <div
           className={
-            'relative z-10 flex flex-col items-center gap-12 rounded-2xl bg-gray-50/50 p-2 lg:grid lg:grid-cols-2 dark:bg-gray-900/50'
+            'relative z-10 flex flex-col gap-12 rounded-2xl bg-gray-50/50 p-6 lg:grid lg:grid-cols-2 dark:bg-gray-900/50'
           }>
           {/* Contact Info */}
           <div className={'space-y-8'}>

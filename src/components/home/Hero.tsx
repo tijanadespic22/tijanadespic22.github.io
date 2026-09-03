@@ -32,7 +32,7 @@ const Hero = () => {
           className={
             'relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white text-center shadow-2xl backdrop-blur-md sm:p-8 lg:p-10 dark:border-gray-700/70 dark:bg-gray-900/50'
           }>
-          <div className={'relative z-10 space-y-8'}>
+          <div className={'relative z-10 space-y-8 py-4'}>
             <div
               className={
                 'inline-block rounded-full border border-gray-200 bg-white/80 px-4 py-2 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80'
