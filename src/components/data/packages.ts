@@ -1,7 +1,7 @@
 const packages: Package[] = [
   {
     title: 'Starter',
-    price: 'od 100',
+    price: 'od 100€',
     promoPrice: '50€',
     features: [
       'Logo dizajn (3 koncepta)',
@@ -15,8 +15,8 @@ const packages: Package[] = [
   },
   {
     title: 'Sajt za mala preduzeća',
-    price: 'od 500€',
-    promoPrice: 'od 250€',
+    price: 'od 300€',
+    promoPrice: 'od 99€',
     priceNote: 'Najpopularniji',
     features: [
       'Logo + Branding paket',
@@ -33,7 +33,7 @@ const packages: Package[] = [
   },
   {
     title: 'Sajt po meri / Web aplikacija',
-    price: '500€+',
+    price: 'Po dogovoru',
     features: [
       'Web aplikacija po meri',
       'Backend & API integracija',

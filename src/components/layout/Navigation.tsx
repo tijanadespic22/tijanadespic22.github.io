@@ -113,6 +113,29 @@ const Navigation = () => {
         : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white',
     );
 
+  const handleSectionClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    target: string,
+    shouldCloseMenu = true,
+  ) => {
+    if (pathname !== '/') return;
+
+    const sectionId = target.replace(/^#/, '');
+    const section = document.getElementById(sectionId);
+
+    if (target === '#top') {
+      event.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.history.pushState(null, '', '/');
+    } else if (section) {
+      event.preventDefault();
+      section.scrollIntoView({behavior: 'smooth', block: 'start'});
+      window.history.pushState(null, '', `#${sectionId}`);
+    }
+
+    if (shouldCloseMenu) setIsOpen(false);
+  };
+
   return (
     <nav
       className={
@@ -138,6 +161,13 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={event => {
+                  if (item.section) {
+                    handleSectionClick(event, `#${item.section}`);
+                  } else {
+                    handleSectionClick(event, '#top');
+                  }
+                }}
                 className={navLinkCls(
                   isHome &&
                     (item.section === '' ? activeSection === '' : activeSection === item.section),
@@ -161,6 +191,7 @@ const Navigation = () => {
 
             <Link
               href={'/#contact'}
+              onClick={event => handleSectionClick(event, '#contact')}
               className={
                 'rounded-full bg-black px-5 py-2 text-sm text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
               }>
@@ -210,7 +241,13 @@ const Navigation = () => {
                   isHome &&
                     (item.section === '' ? activeSection === '' : activeSection === item.section),
                 )}
-                onClick={() => setIsOpen(false)}>
+                onClick={event => {
+                  if (item.section) {
+                    handleSectionClick(event, `#${item.section}`);
+                  } else {
+                    handleSectionClick(event, '#top');
+                  }
+                }}>
                 {t(item.title)}
               </Link>
             ))}
@@ -245,7 +282,7 @@ const Navigation = () => {
               className={
                 'block rounded-full bg-black px-6 py-2.5 text-center text-sm text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
               }
-              onClick={() => setIsOpen(false)}>
+              onClick={event => handleSectionClick(event, '#contact')}>
               {t('Kontakt')}
             </Link>
           </div>

@@ -26,7 +26,7 @@ const Hero = () => {
       />
       <div
         className={
-          'relative z-10 mt-18 flex flex-col gap-6 md:mt-0 lg:flex-row lg:items-center lg:justify-center'
+          'relative z-10 mx-4 mt-18 flex flex-col gap-6 md:mt-0 lg:mx-0 lg:flex-row lg:items-center lg:justify-center'
         }>
         <div
           className={
