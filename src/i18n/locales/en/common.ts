@@ -6,9 +6,9 @@ const common = {
   'Svi projekti': 'All projects',
   'O meni': 'About me',
   Kontakt: 'Contact',
-  'Kontaktiraj Me': 'Contact Me',
-  'Pozovi Me': 'Call Me',
-  'Pogledaj Radove': 'View Works',
+  'Kontaktiraj me': 'Contact me',
+  'Pozovi me': 'Call me',
+  'Pogledaj Radove': 'View works',
   'Dostupna za projekte': 'Available for projects',
   'Open for work ✦': 'Open for work ✦',
   'Na početnoj': 'On the homepage',
@@ -32,7 +32,7 @@ const common = {
   'SEO Optimizacija': 'SEO Optimization',
   'Tehnička podešavanja koja pomažu da te ljudi pronađu na Google-u.\n':
     'Technical settings that help people find you on Google.',
-  'Izdvojeni Projekti': 'Featured Projects',
+  'Izdvojeni projekti': 'Featured projects',
   'Detaljne studije slučaja koje prikazuju proces, rešenja i rezultate':
     'Detailed case studies that show the process, solutions, and results',
   'UI/UX Dizajn & Izrada': 'UI/UX Design & Development',
@@ -125,17 +125,17 @@ const common = {
   'Zadovoljnih Klijenata': 'Satisfied Clients',
   'Godina Iskustva': 'Years of Experience',
   'Zdravo, ja sam <0>Tijana</0> 👋': 'Hello, I am <0>Tijana</0> 👋',
-  'Freelance UI/UX dizajnerka i web developer sa više od <0>7 godina iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.':
+  'Freelance UI/UX dizajnerka i web developer sa više od <0>3 godine iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.':
     'Freelance UI/UX designer and web developer with more than <0>7 years of experience</0>. I help brands and startups look serious and work even better.',
-  'Moj pristup je jednostavan — slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.':
+  'Moj pristup je jednostavan - slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.':
     'My approach is simple — I listen to what you need, understand your users, and deliver design that not only looks great but <0>actually works</0>.',
   'Alati & Tehnologije': 'Tools & Technologies',
   'Započnimo Projekat': "Let's Start a Project",
-  'Pošaljite Upit': 'Send Inquiry',
+  'Pošaljite upit': 'Send inquiry',
   'Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite':
     'Have an idea? Let’s talk about how I can help bring it to life',
-  'Kontakt Informacije': 'Contact Information',
-  'Pošalji Poruku': 'Send Message',
+  'Kontakt informacije': 'Contact information',
+  'Pošalji poruku': 'Send message',
   'Vaše ime': 'Your Name',
   'vas@email.com': 'you@email.com',
   'Opišite vaš projekat...': 'Describe your project...',

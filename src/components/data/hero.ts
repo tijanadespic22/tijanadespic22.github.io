@@ -11,7 +11,7 @@ const heroElements: HeroElement[] = [
   },
   {
     description: 'Godina Iskustva',
-    value: '7+',
+    value: '3+',
     pipe: false,
   },
 ];

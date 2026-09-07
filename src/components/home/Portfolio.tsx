@@ -14,7 +14,7 @@ const Portfolio = () => {
       className={'bg-gray-50 py-24 dark:bg-gray-800'}>
       <div className={'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'}>
         <div className={'mb-16 text-center'}>
-          <h2 className={'mb-4 text-4xl sm:text-5xl dark:text-white'}>{t('Izdvojeni Projekti')}</h2>
+          <h2 className={'mb-4 text-4xl sm:text-5xl dark:text-white'}>{t('Izdvojeni projekti')}</h2>
           <p className={'mx-auto max-w-2xl text-xl text-gray-600 dark:text-gray-400'}>
             {t('Detaljne studije slučaja koje prikazuju proces, rešenja i rezultate')}
           </p>

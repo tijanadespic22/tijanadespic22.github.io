@@ -8,9 +8,9 @@ const common = {
   Blogovi: 'Blogovi',
   Blog: 'Blog',
   Kontakt: 'Kontakt',
-  'Kontaktiraj Me': 'Kontaktiraj Me',
-  'Pozovi Me': 'Pozovi Me',
-  'Pogledaj Radove': 'Pogledaj Radove',
+  'Kontaktiraj me': 'Kontaktiraj me',
+  'Pozovi me': 'Pozovi me',
+  'Pogledaj radove': 'Pogledaj radove',
   'Dostupna za projekte': 'Dostupna za projekte',
   'Open for work ✦': 'Open for work ✦',
   'Na početnoj': 'Na početnoj',
@@ -34,7 +34,7 @@ const common = {
   'SEO Optimizacija': 'SEO Optimizacija',
   'Tehnička podešavanja koja pomažu da te ljudi pronađu na Google-u.\n':
     'Tehnička podešavanja koja pomažu da te ljudi pronađu na Google-u.\n',
-  'Izdvojeni Projekti': 'Izdvojeni Projekti',
+  'Izdvojeni projekti': 'Izdvojeni projekti',
   'Detaljne studije slučaja koje prikazuju proces, rešenja i rezultate':
     'Detaljne studije slučaja koje prikazuju proces, rešenja i rezultate',
   'UI/UX Dizajn & Izrada': 'UI/UX Dizajn & Izrada',
@@ -97,17 +97,17 @@ const common = {
   'Zadovoljnih Klijenata': 'Zadovoljnih Klijenata',
   'Godina Iskustva': 'Godina Iskustva',
   'Zdravo, ja sam <0>Tijana</0> 👋': 'Zdravo, ja sam <0>Tijana</0> 👋',
-  'Freelance UI/UX dizajnerka i web developer sa više od <0>7 godina iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.':
-    'Freelance UI/UX dizajnerka i web developer sa više od <0>7 godina iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.',
-  'Moj pristup je jednostavan — slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.':
-    'Moj pristup je jednostavan — slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.',
+  'Freelance UI/UX dizajnerka i web developer sa više od <0>3 godine iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.':
+    'Freelance UI/UX dizajnerka i web developer sa više od <0>3 godine iskustva</0>. Pomažem brendovima i startapima da izgledaju ozbilno i rade još bolje.',
+  'Moj pristup je jednostavan - slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.':
+    'Moj pristup je jednostavan - slušam šta trebaš, razumem tvoje korisnike i isporučujem dizajn koji ne samo da lepo izgleda, već i <0>stvarno radi</0>.',
   'Alati & Tehnologije': 'Alati & Tehnologije',
   'Započnimo Projekat': 'Započnimo Projekat',
-  'Pošaljite Upit': 'Pošaljite Upit',
+  'Pošaljite upit': 'Pošaljite upit',
   'Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite':
     'Imate ideju? Razgovarajmo o tome kako mogu pomoći da je oživite',
-  'Kontakt Informacije': 'Kontakt Informacije',
-  'Pošalji Poruku': 'Pošalji Poruku',
+  'Kontakt informacije': 'Kontakt informacije',
+  'Pošalji poruku': 'Pošalji poruku',
   'Vaše ime': 'Vaše ime',
   'vas@email.com': 'vas@email.com',
   'Opišite vaš projekat...': 'Opišite vaš projekat...',

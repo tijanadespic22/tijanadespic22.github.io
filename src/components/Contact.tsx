@@ -45,7 +45,7 @@ const ContactForm = () => {
       className={
         '-mx-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 lg:mx-0 lg:p-8 dark:border-gray-700 dark:bg-gray-800'
       }>
-      <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Pošaljite Upit')}</h3>
+      <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Pošaljite upit')}</h3>
 
       {isSubmitted ? (
         <div className={'py-12 text-center'}>
@@ -137,7 +137,7 @@ const ContactForm = () => {
             className={
               'group flex w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-4 text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
             }>
-            {t('Pošalji Poruku')}
+            {t('Pošalji poruku')}
             <SendIcon
               className={'transition group-hover:translate-x-1'}
               height={20}
@@ -175,7 +175,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className={'space-y-8'}>
             <div>
-              <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Kontakt Informacije')}</h3>
+              <h3 className={'mb-6 text-2xl dark:text-white'}>{t('Kontakt informacije')}</h3>
               <div className={'space-y-4'}>
                 {contactItems.map((item, index) => (
                   <LinkWrapper

@@ -4,6 +4,7 @@ import ArrowIcon from '@icons/ArrowIcon';
 import Link from 'next/link';
 import {Trans, useTranslation} from 'react-i18next';
 import HeroParticles from '@components/home/HeroParticles';
+import {cn} from '@utils/CN';
 
 const HeaderComponent: FC<{children?: ReactNode}> = ({children}) => (
   <span className={'relative'}>
@@ -19,15 +20,16 @@ const HeaderComponent: FC<{children?: ReactNode}> = ({children}) => (
 const Hero = () => {
   const {t} = useTranslation();
   return (
-    <section className={'relative flex min-h-screen items-center justify-center overflow-hidden'}>
+    <section
+      className={cn('relative flex items-center justify-center overflow-hidden', 'pt-28 pb-16')}>
       <HeroParticles
         id={'home-hero-particles'}
         particleCount={200}
       />
       <div
-        className={
-          'relative z-10 mx-4 mt-18 flex flex-col gap-6 md:mt-0 lg:mx-0 lg:flex-row lg:items-center lg:justify-center'
-        }>
+        className={cn(
+          'relative z-10 mx-4 flex flex-col gap-6 md:mt-0 lg:mx-0 lg:flex-row lg:items-center lg:justify-center',
+        )}>
         <div
           className={
             'relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white text-center shadow-2xl backdrop-blur-md sm:p-8 lg:p-10 dark:border-gray-700/70 dark:bg-gray-900/50'
@@ -64,7 +66,7 @@ const Hero = () => {
                 className={
                   'group flex items-center gap-2 rounded-full border bg-linear-to-r from-blue-600 to-purple-600 px-8 py-4 text-white hover:bg-gray-800 dark:border-white'
                 }>
-                {t('Kontaktiraj Me')}
+                {t('Kontaktiraj me')}
                 <ArrowIcon
                   height={30}
                   width={30}
@@ -78,7 +80,7 @@ const Hero = () => {
                 className={
                   'group flex items-center gap-2 rounded-full border bg-linear-to-r from-purple-600 to-blue-600 px-8 py-4 text-white hover:bg-gray-800 dark:border-white'
                 }>
-                {t('Pozovi Me')}
+                {t('Pozovi me')}
                 <ArrowIcon
                   height={30}
                   width={30}
@@ -90,7 +92,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className={'invisible relative w-1/4 md:visible'}>
+        <div className={'relative hidden w-1/4 md:flex'}>
           <img
             src={'/cv.jpg'}
             alt={'Hero Image'}
