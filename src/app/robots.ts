@@ -1,4 +1,5 @@
 import type {MetadataRoute} from 'next';
+import {BASE_URL} from '@constants/website';
 
 export const dynamic = 'force-static';
 
@@ -11,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://tijanadespic.hok.rs/sitemap.xml',
-    host: 'https://tijanadespic.hok.rs',
+    sitemap: `${BASE_URL}/sitemap.xml`,
+    host: BASE_URL,
   };
 }

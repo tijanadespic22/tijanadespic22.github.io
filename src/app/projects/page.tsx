@@ -2,21 +2,22 @@ import {caseStudies} from '@/components/data/portfolio';
 import type {Metadata} from 'next';
 import Projects from '@components/Projects';
 import {memo} from 'react';
+import {BASE_URL as SITE_URL} from '@constants/website';
 
 export const metadata: Metadata = {
   title: 'Projekti — UI/UX Dizajn & Web Development Portfolio',
   description:
     'Portfolio radova Tijane Despić — UI/UX dizajn, web aplikacije, mobilni dizajn i logo dizajn. Pogledaj case studies i rezultate projekata za brendove i startape iz Srbije.',
-  alternates: {canonical: 'https://tijanadespic.hok.rs/projects'},
+  alternates: {canonical: `${SITE_URL}/projects`},
   openGraph: {
     title: 'Projekti — UI/UX Dizajn & Web Development Portfolio | Tijana Despić',
     description:
       'Portfolio radova Tijane Despić — UI/UX dizajn, web aplikacije, mobilni dizajn i logo dizajn za brendove i startape.',
-    url: 'https://tijanadespic.hok.rs/projects',
+    url: `${SITE_URL}/projects`,
   },
 };
 
-const BASE_URL = 'https://tijanadespic.hok.rs';
+const BASE_URL = SITE_URL;
 
 const ProjectsPage = () => {
   const breadcrumbJsonLd = {

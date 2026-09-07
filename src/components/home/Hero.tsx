@@ -95,7 +95,7 @@ const Hero = () => {
         <div className={'relative hidden w-1/4 md:flex'}>
           <img
             src={'/cv.jpg'}
-            alt={'Hero Image'}
+            alt={'Tijana Despić — UI/UX dizajner i web developer'}
             className={
               'h-auto w-full rounded-2xl border border-white/40 shadow-[0_35px_90px_rgba(0,0,0,0.5)] dark:border-gray-700/60'
             }

@@ -2,17 +2,18 @@ import type {Metadata} from 'next';
 import {memo} from 'react';
 import Blogs from '@components/blogs/Blogs';
 import blogs from '@data/blogs.json';
+import {BASE_URL as SITE_URL} from '@constants/website';
 
 export const metadata: Metadata = {
   title: 'Blog — UI/UX Dizajn & Web Development | Tijana Despić',
   description:
     'Blog o JavaScriptu, UI/UX dizajnu i modernom web developmentu. Kratki vodiči, praktični saveti i objašnjenja za stvarne projekte.',
-  alternates: {canonical: 'https://tijanadespic.hok.rs/blogs'},
+  alternates: {canonical: `${SITE_URL}/blogs`},
   openGraph: {
     title: 'Blog — UI/UX Dizajn & Web Development | Tijana Despić',
     description:
       'Blog o JavaScriptu, UI/UX dizajnu i modernom web developmentu. Kratki vodiči, praktični saveti i objašnjenja za stvarne projekte.',
-    url: 'https://tijanadespic.hok.rs/blogs',
+    url: `${SITE_URL}/blogs`,
     type: 'website',
   },
   twitter: {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-const BASE_URL = 'https://tijanadespic.hok.rs';
+const BASE_URL = SITE_URL;
 
 const BlogsPage = () => {
   const itemListJsonLd = {

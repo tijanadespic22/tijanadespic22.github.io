@@ -93,6 +93,9 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
           name={'google-site-verification'}
           content={'6d1TK1vS1Lnn5F_swvTnJSqBV4KZSNpPOY8uWWnCfNA'}
         />
+        <link rel={'alternate'} hrefLang={'sr'} href={BASE_URL} />
+        <link rel={'alternate'} hrefLang={'en'} href={BASE_URL} />
+        <link rel={'alternate'} hrefLang={'x-default'} href={BASE_URL} />
         <script
           type={'application/ld+json'}
           dangerouslySetInnerHTML={{
