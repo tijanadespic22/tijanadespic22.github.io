@@ -27,7 +27,7 @@ const Portfolio = () => {
               key={project.id}
               className={cn(
                 'flex shrink-0 flex-col rounded-2xl border border-gray-200 bg-white py-4 dark:border-gray-700 dark:bg-gray-900',
-                'items-center gap-8 lg:w-auto lg:max-w-none lg:shrink lg:bg-transparent lg:dark:bg-transparent',
+                'items-center gap-8 md:w-auto md:max-w-none md:shrink md:bg-transparent md:dark:bg-transparent',
                 'border border-gray-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900',
               )}>
               {/* Image */}
@@ -41,7 +41,7 @@ const Portfolio = () => {
                   <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className={'h-full w-full object-cover transition-transform duration-500'}
+                    className={'size-full object-cover transition-transform duration-500'}
                   />
                 </Link>
               </div>

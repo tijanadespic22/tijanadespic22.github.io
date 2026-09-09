@@ -7,6 +7,7 @@ import type {Metadata} from 'next';
 import {memo} from 'react';
 import Blogs from '@components/home/Blogs';
 import {BASE_URL} from '@constants/website';
+import Suggestion from '@components/home/Suggestion';
 
 export const metadata: Metadata = {
   title: 'Tijana Despić — UI/UX Dizajn & Web Development | Srbija',
@@ -27,6 +28,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Portfolio />
+      <Suggestion />
       <Blogs />
       <Packages />
       <Contact />

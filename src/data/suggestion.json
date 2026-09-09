@@ -1,0 +1,27 @@
+[
+  {
+    "description": "Tijana je razumela šta nam treba već na prvom sastanku. Sajt je gotov na vreme i izgleda bolje nego što smo zamislili.",
+    "name": "Milan Jovanović",
+    "position": "Direktor prodaje"
+  },
+  {
+    "description": "Tijana je bila izuzetno profesionalna i posvećena našem projektu. Njeno iskustvo i kreativnost su nam pomogli da postignemo sjajne rezultate.",
+    "name": "Ana Petrović",
+    "position": "Marketing menadžer"
+  },
+  {
+    "description": "Saradnja sa Tijanom je bila pravo zadovoljstvo. Njene ideje su osvežavajuće i uvek je spremna da pronađe najbolje rešenje za naše potrebe.",
+    "name": "Marko Nikolić",
+    "position": "CEO"
+  },
+  {
+    "description": "Tijana je pravi profesionalac. Njena posvećenost i pažnja prema detaljima su nas impresionirali. Preporučujemo je svima koji žele kvalitetan rad.",
+    "name": "Jelena Stojanović",
+    "position": "Projekt menadžer"
+  },
+  {
+    "description": "Tijana je bila ključna za uspeh našeg projekta. Njena sposobnost da razume naše potrebe i pruži inovativna rešenja je neprocenjiva.",
+    "name": "Ivan Dimitrijević",
+    "position": "CTO"
+  }
+]

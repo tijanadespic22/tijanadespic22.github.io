@@ -171,6 +171,8 @@ const common = {
   'Otvori blog': 'Open blog',
   'Poslednji blogovi': 'Latest blogs',
   'Vidi sve blogove': 'See all blogs',
+  'Šta klijenti kažu': 'What clients say',
+  'Prevuci horizontalno da vidiš još utisaka': 'Swipe horizontally to see more testimonials',
 };
 
 export default common;

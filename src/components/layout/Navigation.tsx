@@ -125,11 +125,11 @@ const Navigation = () => {
     const section = document.getElementById(sectionId);
 
     if (target === '#top') {
-      event.preventDefault();
+      event?.preventDefault?.();
       window.scrollTo({top: 0, behavior: 'smooth'});
       window.history.pushState(null, '', '/');
     } else if (section) {
-      event.preventDefault();
+      event?.preventDefault?.();
       section.scrollIntoView({behavior: 'smooth', block: 'start'});
       window.history.pushState(null, '', `#${sectionId}`);
     }
@@ -157,7 +157,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop */}
-          <div className={'hidden items-center gap-1 md:flex'}>
+          <div className={'hidden items-center gap-1 lg:flex'}>
             {homeLinks.map(item => (
               <Link
                 key={item.href}
@@ -204,7 +204,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile toggle */}
-          <div className={'flex items-center gap-2 md:hidden'}>
+          <div className={'flex items-center gap-2 lg:hidden'}>
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
