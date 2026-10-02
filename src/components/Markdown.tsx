@@ -12,6 +12,15 @@ const MarkdownFc: FC<{children: string}> = ({children}) => {
             className={cn('leading-8 text-gray-700 dark:text-gray-300', props.className)}
           />
         ),
+        a: ({node: _node, ...props}) => (
+          <a
+            {...props}
+            className={cn(
+              'font-medium text-blue-600 underline decoration-blue-300 underline-offset-4 transition-colors hover:text-blue-800 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300',
+              props.className,
+            )}
+          />
+        ),
         h1: ({node: _node, ...props}) => (
           <h1
             {...props}

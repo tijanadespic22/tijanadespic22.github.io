@@ -48,7 +48,7 @@ const Blogs = () => {
                   <div className={'relative min-h-72 overflow-hidden bg-gray-100 dark:bg-gray-800'}>
                     <Image
                       src={blog.landingImage}
-                      alt={blog.title}
+                      alt={blog.landingImageAlt ?? blog.title}
                       fill
                       sizes={'(max-width: 1024px) 100vw, 45vw'}
                       className={

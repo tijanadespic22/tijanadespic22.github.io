@@ -45,7 +45,7 @@ export const generateMetadata = async ({params}: {params: Promise<Params>}): Pro
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: blog.title,
+          alt: blog.landingImageAlt ?? blog.title,
         },
       ],
     },
